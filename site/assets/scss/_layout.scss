@@ -55,3 +55,57 @@
   grid-area: content;
   min-width: 1px; // Fix width when bd-content contains a `<pre>` https://github.com/twbs/bootstrap/issues/25410
 }
+
+
+///start Shooter styles 
+
+.card-header {
+    .headshot {
+        background-position: center;
+        float: left; 
+    }  
+
+    h5 {
+      float: left;
+      margin: $spacer;
+    }
+
+    h4 {
+      line-height: 50px;
+    }
+}
+//end card header 
+
+.headshot {
+    border: 1px solid $secondary;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-position: center;
+}
+.likes-container, .comments-container {
+  float: left;
+  margin-right: $spacer;
+  height: 100%;
+  padding: 8px;
+  span {
+    display: inline-block;
+  }
+  h6{
+    margin-bottom: 0;
+  }
+}//end likes container
+
+.likes, .comments {
+  background-image: url(/docs/5.3/assets/img/shooter-like.svg);
+  width: 20px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.comments {
+    background-image: url(/docs/5.3/assets/img/comment-bubble.svg);
+}

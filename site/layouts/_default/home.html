@@ -1,14 +1,143 @@
 {{ define "main" }}
   <main>
-    <div class="container-xxl bd-gutter masthead-followup">
-      {{ partial "home/get-started" . }}
-      {{ partial "home/customize" . }}
-      {{ partial "home/css-variables" . }}
-      {{ partial "home/components-utilities" . }}
-      {{ partial "home/plugins" . }}
-      {{ partial "home/icons" . }}
-      {{ partial "home/themes" . }}
-    </div>
+<div class="hero p-5 mb-4 bg-primary">
+  <h1 class="text-light">Shooter Talks</h1>
+</div>
+<div class="container-xxl mt-3">
+  <h2 class="text-center mb-3">Popular</h2>
+  <div class="row">
+    <div class="col-lg-4 col-sm-12">
+      {{ $targetUser := index .Site.Data.users 1 }}
+      {{ $extendedProfile := merge $targetUser.profile (dict
+      "storyName" "This is a story"
+      "storyDescription" (printf "Custom description for this story")
+      "storyURL" "/shooterwives.html"
+      "date" "Aug XX, 2023"
+      ) }} 
+      {{ partial "pieces/card" $extendedProfile }}
+    </div><!-- end column-->
+
+    <div class="col-lg-4 col-sm-12">
+      {{ $targetUser := index .Site.Data.users 0 }}
+      {{ $extendedProfile := merge $targetUser.profile (dict
+      "storyName" "How about this"
+      "storyDescription" (printf "Something different")
+      "storyURL" "https://custom-url.com"
+      "date" "Aug XX, 2023"
+      ) }}
+      {{ partial "pieces/card" $extendedProfile }}
+    </div><!-- end column-->
+
+    <div class="col-lg-4 col-sm-12">
+      {{ $targetUser := index .Site.Data.users 1 }}
+      {{ $extendedProfile := merge $targetUser.profile (dict
+      "storyName" "This is a story"
+      "storyDescription" (printf "Custom description for this story")
+      "storyURL" "https://custom-url.com"
+      "date" "Aug XX, 2023"
+      ) }}
+      {{ partial "pieces/card" $extendedProfile }}
+    </div><!-- end column-->
+  </div> <!-- end row--> 
+ 
+<div class="row"> 
+  <h2 class="text-center mt-3 mb-3">Latest Posts</h2>
+  <div class="col-lg-8">
+      {{ $targetUser := index .Site.Data.users 3 }}
+      {{ $extendedProfile := merge $targetUser.profile (dict
+      "storyName" "This is a story"
+      "storyDescription" (printf "Custom description for this story")
+      "storyURL" "https://custom-url.com"
+      "date" "Aug XX, 2023"
+      ) }}
+      {{ partial "pieces/card" $extendedProfile }}
+
+      {{ $targetUser := index .Site.Data.users 1 }}
+      {{ $extendedProfile := merge $targetUser.profile (dict
+      "storyName" "This is a story"
+      "storyDescription" (printf "Custom description for this story")
+      "storyURL" "https://custom-url.com"
+      "date" "Aug XX, 2023"
+      ) }}
+      {{ partial "pieces/card" $extendedProfile }}
+
+      {{ $targetUser := index .Site.Data.users 1 }}
+      {{ $extendedProfile := merge $targetUser.profile (dict
+      "storyName" "This is a story"
+      "storyDescription" (printf "Custom description for this story")
+      "storyURL" "https://custom-url.com"
+      "date" "Aug XX, 2023"
+      ) }}
+      {{ partial "pieces/card" $extendedProfile }}
+  </div><!-- end col left-->
+  <div class="col-lg-4 mb-3">
+    <div class="text-bg-light rounded-1 p-3 border">
+          <img src="/docs/5.3/assets/img/ads/sweat-rags-2022.jpg" class="img-fluid" />
+     
+    <p class="text-center mt-1 mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill"
+      viewBox="0 0 16 16">
+      <path
+        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+    </svg> Sponsored</p>
+  </div><!-- end div-->
+
+  <h3 class="text-center mt-3 mb-3">Top Contributors</h3>
+  <div class="container border bg-light p-3 rounded-1">
+  <div class="row">
+    <div class="col-lg-4">
+        {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+        {{ range $index, $user := .Site.Data.users }}
+        {{ if eq $index $targetIndex }}
+        <div class="headshot mb-2" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div><!-- end headshot-->
+        <h6 class="mb-0">{{ $user.profile.name }}</h6>
+        <p class="mb-0">{{ $user.profile.posts }} posts</p>
+        {{ end }}
+        {{ end }}
+    </div><!-- end col-->
+
+    <div class="col-lg-4">
+      {{ $targetIndex := 1 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+      {{ range $index, $user := .Site.Data.users }}
+      {{ if eq $index $targetIndex }}
+      <div class="headshot mb-2" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+      <!-- end headshot-->
+      <h6 class="mb-0">{{ $user.profile.name }}</h6>
+      <p class="mb-0">{{ $user.profile.posts }} posts</p>
+      {{ end }}
+      {{ end }}
+    </div><!-- end col-->
+
+      <div class="col-lg-4">
+        {{ $targetIndex := 1 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+        {{ range $index, $user := .Site.Data.users }}
+        {{ if eq $index $targetIndex }}
+        <div class="headshot mb-2" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+        <!-- end headshot-->
+        <h6 class="mb-0">{{ $user.profile.name }}</h6>
+        <p class="mb-0">{{ $user.profile.posts }} posts</p>
+        {{ end }}
+        {{ end }}
+      </div><!-- end col-->
+
+  </div><!-- end row-->
+  
+  </div><!-- end container-->
+ 
+  <h3 class="text-center mt-3 mb-3">Weird</h3>
+  <ul class="list-group">
+    <li class="list-group-item"><a href="#">List item</a></li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul><!-- end ul-->
+  </div><!-- end col right-->
+
+</div><!-- end row -->
+
+
+</div><!-- end container-->
   </main>
 
   {{ .Content }}

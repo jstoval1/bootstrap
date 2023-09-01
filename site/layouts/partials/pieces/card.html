@@ -1,0 +1,23 @@
+<div class="card mb-3">
+  <div class="card-header">
+      <div class="headshot" style="background-image: url('{{ .headshot | relURL }}');"></div><!-- end headshot--> 
+      <h5 class="text-left">{{ .name }} <span>&#8226; {{ .date }} </span></h5>
+      <div class="clearfix"></div>
+  </div><!-- end card header-->
+   
+  <div class="card-body">
+    <h3>{{ .storyName }}</h3>
+    <p>{{ .storyDescription }}</p> <!-- Use the description parameter -->
+    <a href="{{ .storyURL }}" class="card-link">Read more</a> <!-- Use the URL parameter -->
+    <div class="latest-activity">
+      <h6 class="mt-3 text-secondary fw-ligh"><em>Latest Activity: Something about activity</em></h6>
+    </div><!-- end latest activity-->
+  </div><!-- end card body-->
+
+  <div class="card-footer p-0">
+  <div class="likes-container"><span class="likes"></span> <span>111k</span></div><!-- end container-->
+  <div class="comments-container"><span class="comments"></span> <span>123</span> </div><!-- end container-->
+  <div class="clearfix"></div>
+
+  </div><!-- end card-footer-->
+</div> <!-- end card-->

@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+
+  {{ $targetIndex := 1 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+  {{ range $index, $user := .Site.Data.users }}
+  {{ if eq $index $targetIndex }}
+  <div class="team-member">
+    <h2>{{ $user.profile.name }}</h2>
+    <p>Team: {{ $user.profile.team }}</p>
+    <img src="{{ $user.profile.headshot }}" alt="{{ $user.profile.name }} Headshot">
+  </div>
+  {{ end }}
+  {{ end }}
+    
+    </p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+  </div><!-- end card--->
