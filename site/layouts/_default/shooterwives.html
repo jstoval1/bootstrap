@@ -1,6 +1,185 @@
 
   {{ define "main" }}
-  <main class="my-auto p-5" id="content">
+  <main class="" id="content">
+    <div class="container-xxl p-3">
+      <div class="row">
+        <div class="col-lg-9 col-sm-12">
+          <div class="thread border bg-light p-0 m-0 rounded-2">
+            <div class="thread__header bg-secondary-subtle p-2">
+              {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+              {{ range $index, $user := .Site.Data.users }}
+              {{ if eq $index $targetIndex }}
+              <div class="row align-items-center justify-content-md-center">
+                <div class="col-auto">
+                  <div class="headshot mb-0"style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                </div><!-- end col-->
+                <div class="col">
+                      {{ $user.profile.name }}
+                      {{ end }}
+                      {{ end }}
+                      <span>| <strong>August XX, 2023</strong></span>
+                </div><!-- end col-->
+              </div><!-- end row-->
+            </div><!-- end thread__header-->
+
+            <div class="thread__body p-3">
+              <h2>This will be the title of the story</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis congue laoreet. Nam vitae urna tellus. Fusce porta ante a mollis fringilla. Pellentesque euismod eleifend sem sed tempus. Aenean sed orci vitae diam porta malesuada. Praesent quam purus, auctor quis tristique eget, molestie a arcu. Vivamus iaculis libero sit amet est dapibus, in porta tellus laoreet. Aenean gravida luctus massa non consectetur. Suspendisse consequat, ipsum et vulputate luctus, eros orci tsodales risus, nec fermentum mauris ipsum in sem.</p>
+
+              <h4 class="text-center">Replies</h4>
+              <!---------------------------------Start Thread Reply ----------------------------------->
+              <div class="thread__body__reply">
+                {{ $targetIndex := 0 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                {{ range $index, $user := .Site.Data.users }}
+                {{ if eq $index $targetIndex }}
+                <div class="row align-items-center justify-content-md-center">
+                  <div class="col-auto">
+                    <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                  </div><!-- end col-->
+                  <div class="col p-0">
+                    {{ $user.profile.name }}
+                    {{ end }}
+                    {{ end }}
+                    <span>| <span class="fw-light"><em>4 hours ago</em></span></span>
+                  </div><!-- end col-->
+                </div><!-- end row-->
+                <div class="thread__body__reply__inner">
+                  <p>Whadddduppp boyz</p>
+                  <!-- GIF-->
+                  <img src="https://media.giphy.com/media/DUO9dc3yDLXHO/giphy.gif" class="img-fluid"/>
+                  <!-- end GIF-->
+                    <div class="thread__body__likes">
+                        <div class="likes-container"><span class="likes"></span> <span>30</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+                </div><!-- end reply inner-->
+              </div><!-- end reply-->
+
+              <div class="thread__body__reply">
+                {{ $targetIndex := 2 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                {{ range $index, $user := .Site.Data.users }}
+                {{ if eq $index $targetIndex }}
+                <div class="row align-items-center justify-content-md-center">
+                  <div class="col-auto">
+                    <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                  </div><!-- end col-->
+                  <div class="col p-0">
+                    {{ $user.profile.name }}
+                    {{ end }}
+                    {{ end }}
+                    <span>| <span class="fw-light"><em>4 hours ago</em></span></span>
+                  </div><!-- end col-->
+                </div><!-- end row-->
+                <div class="thread__body__reply__inner">
+                  <p>This is bullshit</p>
+                  <div class="thread__body__likes">
+                    <div class="likes-container"><span class="likes"></span> <span>30</span></div><!-- end container-->
+                  </div><!-- end likes container-->
+
+                  <!-- nested reply -->
+                  <div class="thread__body__reply__nested">
+                    {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                    {{ range $index, $user := .Site.Data.users }}
+                    {{ if eq $index $targetIndex }}
+                    <div class="row align-items-center justify-content-md-center">
+                      <div class="col-auto">
+                        <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                      </div><!-- end col-->
+                      <div class="col p-0">
+                        {{ $user.profile.name }}
+                        {{ end }}
+                        {{ end }}
+                        <span>| <span class="fw-light"><em>4 hours ago</em></span></span>
+                      </div><!-- end col-->
+                    </div><!-- end row-->
+                    <div class="thread__body__reply__inner">
+                      <p>Come on man... chill!</p>
+                      <div class="thread__body__likes">
+                        <div class="likes-container"><span class="likes"></span> <span>30</span></div><!-- end container-->
+                      </div><!-- end likes container-->
+                    </div><!-- end reply inner-->
+                  </div><!-- end reply-->
+                  <!-- end nested reply -->
+                </div><!-- end reply inner-->
+              </div><!-- end reply-->
+
+              <div class="thread__body__reply">
+                {{ $targetIndex := 8 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                {{ range $index, $user := .Site.Data.users }}
+                {{ if eq $index $targetIndex }}
+                <div class="row align-items-center justify-content-md-center">
+                  <div class="col-auto">
+                    <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                  </div><!-- end col-->
+                  <div class="col p-0">
+                    {{ $user.profile.name }}
+                    {{ end }}
+                    {{ end }}
+                    <span>| <span class="fw-light"><em>4 hours ago</em></span></span>
+                  </div><!-- end col-->
+                </div><!-- end row-->
+                <div class="thread__body__reply__inner">
+                  <p>This is bullshit</p>
+                  <img src="https://media.giphy.com/media/kc0kqKNFu7v35gPkwB/giphy.gif">
+                  <!-- nested reply -->
+                  <div class="thread__body__reply__nested">
+                    {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                    {{ range $index, $user := .Site.Data.users }}
+                    {{ if eq $index $targetIndex }}
+                    <div class="row align-items-center justify-content-md-center">
+                      <div class="col-auto">
+                        <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                      </div><!-- end col-->
+                      <div class="col p-0">
+                        {{ $user.profile.name }}
+                        {{ end }}
+                        {{ end }}
+                        <span>| <span class="fw-light"><em>4 hours ago</em></span></span>
+                      </div><!-- end col-->
+                    </div><!-- end row-->
+                    <div class="thread__body__reply__inner">
+                      <p>Come on man... chill! &#128169;</p>
+                      <!-- video EMBED example-->
+                      <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WDiB4rtp1qw?si=twqOSBt_wdUd9oek"
+                          title="YouTube video player" frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen></iframe>
+                      </div><!-- end iframe wrap-->
+                      <!-- end VIDEO EMBED-->
+
+                    </div><!-- end reply inner-->
+                  </div><!-- end reply-->
+                  <!-- end nested reply -->
+                </div><!-- end reply inner-->
+              </div><!-- end reply-->
+              <!---------------------------------End Thread Reply ----------------------------------->
+
+            </div><!-- end thread body-->
+          </div><!-- end thread-->
+        </div><!-- end col-->
+        <div class="col-lg-3 col-sm-12">
+          <div class="text-bg-light rounded-1 p-3 border">
+            <img src="https://placehold.co/300x600/000000/FFF" class="img-fluid" />
+            <p class="text-center mt-1 mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+              </svg> Sponsored
+            </p>
+          </div><!-- end div-->
+          <h4 class="mt-3">Check these out</h4>
+            <ul class="list-group mt-3">
+              <li class="list-group-item"><a href="#">List item</a></li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">A fourth item</li>
+              <li class="list-group-item">And a fifth one</li>
+            </ul><!-- end ul-->
+        </div><!-- end sidebar-->
+      </div><!--end row-->
+    </div><!-- end container -->
+
     {{ .Content }}
   </main>
   {{ end }}

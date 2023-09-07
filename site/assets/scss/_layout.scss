@@ -58,6 +58,11 @@
 
 
 ///start Shooter styles 
+a {
+  color: $green-500;
+}
+
+h1, h2, h3, h4 {color: #161E37;}
 
 .card-header {
     .headshot {
@@ -77,12 +82,14 @@
 //end card header 
 
 .headshot {
-    border: 1px solid $secondary;
+    border: 1px solid $gray-500;
     background-size: cover;
     height: 50px;
     width: 50px;
-    border-radius: 50px;
+    //border-radius: 50px;
     background-position: center;
+    z-index: 1;
+    position: relative;
 }
 .likes-container, .comments-container {
   float: left;
@@ -104,8 +111,86 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  cursor: pointer;
+}
+
+.likes:hover {
+  background-image: url(/docs/5.3/assets/img/shooter-like-hover.svg);
 }
 
 .comments {
     background-image: url(/docs/5.3/assets/img/comment-bubble.svg);
 }
+
+////start the reply thread styling 
+.navbar.shooter-nav {
+  background-color: #19381C !important;
+  border-bottom: 2px solid #E3B052 !important;
+}
+
+.hero {
+  background-image: url(/docs/5.3/assets/img/hero-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  //min-height: 280px;
+  background-color: #19381C;
+  background-repeat: no-repeat;
+    img {
+      margin: $spacer * 3 auto;
+    }//end img 
+}//end hero
+
+.thread {
+  &__header {
+  }//end header 
+
+  &__body {
+    &__likes {
+        .likes-container {
+          float: none;
+          padding: 0;
+          height: auto;
+          margin-bottom: $spacer;
+        }
+      }
+
+      img {
+        display: block;
+        margin-bottom: $spacer;
+      }
+  }//end body 
+
+  &__body__reply {
+    border-top: 1px solid $gray-300;
+    padding-top: $spacer;
+
+    
+    &__inner {
+    border-left: 2px solid $gray-500;
+    margin-left: 23px;
+    padding-left: $spacer * 2;
+    margin-bottom: $spacer * 2;
+
+  }//end reply inner 
+
+  &__nested {
+    position: relative;
+
+    &::before {
+        content: "";
+        background: transparent;
+        height: 25px;
+        width: 53px;
+        display: block;
+        position: absolute;
+        bottom: calc(100% - 20px);
+        left: -33px;
+        border-left: 1px solid $gray-500;
+        border-radius: 0 0 0 15px;
+        border-bottom: 2px solid $gray-500;
+        z-index: 0;
+    }//end before 
+  }
+ 
+  }//end reply 
+}//end thread 
