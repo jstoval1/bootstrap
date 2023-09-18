@@ -194,3 +194,46 @@ h1, h2, h3, h4 {color: #161E37;}
  
   }//end reply 
 }//end thread 
+
+.profile {
+  * {
+    font-size: 17px;
+  }//
+
+  &.TN {
+    .card-footer {
+      color: $red-500;
+      font-weight: bold;
+    }
+  }
+
+     &.SIP {
+       .card-footer {
+         color: $blue-500;
+         font-weight: bold;
+       }
+     }
+
+  &__headshot {
+    height: 165px;  
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-right: $gray-500 solid 1px;
+  }//end headshot 
+
+  h5 {
+    color: $green-500;
+  }
+}///end profile 
+
+.actualname {
+  font-size: 11px;
+  font-style: italic;
+    &::before {
+      content: "(";
+    }
+    &::after {
+      content: ")";
+    }
+}

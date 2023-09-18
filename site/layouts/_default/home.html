@@ -6,38 +6,38 @@
 <div class="container-xxl mt-3">
   <h2 class="text-center mb-3">Popular</h2>
   <div class="row">
+      <div class="col-lg-4 col-sm-12">
+        {{ $targetUser := index .Site.Data.users 6 }}
+        {{ $extendedProfile := merge $targetUser.profile (dict
+        "storyName" "Welcome to Shooter X"
+        "storyDescription" (printf "Let's get this party started. Time to kick off Shooter X.")
+        "storyURL" "/welcome.html"
+        "date" "Sep 24, 2023"
+        "likes" "300"
+        "comments" "20"
+        "class" "h-100"
+        "featuredimg" "/docs/5.3/assets/img/18-hole.jpg"
+        "activity" "Someone replied to this thread"
+        ) }}
+        {{ partial "pieces/card" $extendedProfile }}
+      </div><!-- end column-->
+      
     <div class="col-lg-4 col-sm-12">
-      {{ $targetUser := index .Site.Data.users 1 }}
+      {{ $targetUser := index .Site.Data.users 2 }}
       {{ $extendedProfile := merge $targetUser.profile (dict
       "storyName" "Data is beautiful"
       "storyDescription" (printf "After 9 years of matches, outcomes and one massive spreadsheet - we have compiled everything into one glorious thread.")
       "storyURL" "/shooterwives.html"
-      "date" "Aug XX, 2023"
+      "date" "Sep 22, 2023"
       "likes" "41k"
       "comments" "100"
       "class" "h-100"
-      "featuredimg" "https://placehold.co/300x100/000000/FFF"
+      "featuredimg" "https://media.giphy.com/media/l3fZLMbuCOqJ82gec/giphy.gif"
       "activity" "jsto44 replied to a thread"
       ) }} 
       {{ partial "pieces/card" $extendedProfile }}
     </div><!-- end column-->
-
-    <div class="col-lg-4 col-sm-12">
-      {{ $targetUser := index .Site.Data.users 0 }}
-      {{ $extendedProfile := merge $targetUser.profile (dict
-      "storyName" "How about this"
-      "storyDescription" (printf "Something different")
-      "storyURL" "https://custom-url.com"
-      "date" "Aug XX, 2023"
-      "likes" "41k"
-      "comments" "100"
-      "class" "h-100"
-      "featuredimg" "https://placehold.co/300x100/000000/FFF"
-      "activity" "jsto44 replied to a thread"
-      ) }}
-      {{ partial "pieces/card" $extendedProfile }}
-    </div><!-- end column-->
-
+ 
     <div class="col-lg-4 col-sm-12">
       {{ $targetUser := index .Site.Data.users 1 }}
       {{ $extendedProfile := merge $targetUser.profile (dict
@@ -97,7 +97,7 @@
   </div><!-- end col left-->
   <div class="col-lg-4 mb-3">
     <div class="text-bg-light rounded-1 p-3 border">
-      <img src="/docs/5.3/assets/img/ads/sweat-rags-2022.jpg" class="img-fluid" />
+      <img src="/docs/5.3/assets/img/ads/trey-ad.jpg" class="img-fluid" />
       <p class="text-center mt-1 mb-0">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill"
       viewBox="0 0 16 16">

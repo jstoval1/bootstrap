@@ -1,0 +1,23 @@
+<!-- users.html -->
+{{ $users := .Site.Data.users }}
+{{ range $index, $user := $users }}
+<div class="col-lg-4 col-md-4 col-sm-12">
+    <div class="card rounded-2 mb-3 profile {{ .profile.team }}">
+        <div class="row g-0">
+            <div class="col-6">
+                <div class="profile__headshot" style="background-image: url('{{ .profile.headshot | relURL }}');"></div>
+                <!-- end profile headshot-->
+            </div><!-- end col-->
+            <div class="col-6">
+            <div class="card-body">
+                <h5 class="mt-0">{{ .profile.name }}</h5>
+                <p class="mb-0"><strong>{{ .profile.actualname }}</strong><br>
+                <span class="fw-light fst-italic text-right"> {{ add $index 0 }}</span>
+                </p>
+            </div><!--end card body-->
+            </div><!-- end col-->
+        </div><!-- end inner row-->
+        <div class="card-footer text-left">{{ .profile.team }} </div>
+    </div><!--- end card-->
+</div><!--end col-->
+{{ end }}
