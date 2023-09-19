@@ -14,10 +14,21 @@
                 </div>
               </div><!-- end col-->
               <div class="col">
-                {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                <!---- start the display of the profile and actual name -->
+                <div class="row justify-content-start align-items-center">
+                  <div class="col-auto border-secondary-subtle border-end">
+                    <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname
+                        }}</div>
+                    </div>
+                  </div><!-- end column-->
+
+                  <div class="col-auto">
+                    <strong>Sep 24, 2023</strong>
+                  </div><!-- end column-->
+                </div><!-- end row-->
                 {{ end }}
                 {{ end }}
-                <span>| <strong>Sep 24, 2023</strong></span>
+                <!--end the display of the profile and actual name-->
               </div><!-- end col-->
             </div><!-- end row-->
           </div><!-- end thread__header-->
@@ -55,10 +66,21 @@
                   </div>
                 </div><!-- end col-->
                 <div class="col p-0">
-                  {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                  <!---- start the display of the profile and actual name -->
+                  <div class="row justify-content-start align-items-center">
+                    <div class="col-auto border-secondary-subtle border-end">
+                      <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                          {{$user.profile.actualname }}</div>
+                      </div>
+                    </div><!-- end column-->
+
+                    <div class="col-auto">
+                      <span class="fw-light"><em>6 hours ago</em></span>
+                    </div><!-- end column-->
+                  </div><!-- end row-->
                   {{ end }}
                   {{ end }}
-                  <span>| <span class="fw-light"><em>6 hours ago</em></span></span>
+                  <!--end the display of the profile and actual name-->
                 </div><!-- end col-->
               </div><!-- end row-->
               <!-------------- start lets go bitches reply inner ------------>
@@ -78,10 +100,21 @@
                         style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                     </div><!-- end col-->
                     <div class="col p-0">
-                      {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                              {{$user.profile.actualname }}</div>
+                          </div>
+                        </div><!-- end column-->
+
+                        <div class="col-auto">
+                          <span class="fw-light"><em>3 hours ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
                       {{ end }}
                       {{ end }}
-                      <span>| <span class="fw-light"><em>3 hours ago</em></span></span>
+                      <!--end the display of the profile and actual name-->
                     </div><!-- end col-->
                   </div><!-- end row-->
                   <div class="thread__body__reply__inner">
@@ -101,10 +134,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>2 hours ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -134,10 +178,21 @@
                   </div>
                 </div><!-- end col-->
                 <div class="col p-0">
-                  {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                  <!---- start the display of the profile and actual name -->
+                  <div class="row justify-content-start align-items-center">
+                    <div class="col-auto border-secondary-subtle border-end">
+                      <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                          {{$user.profile.actualname }}</div>
+                      </div>
+                    </div><!-- end column-->
+
+                    <div class="col-auto">
+                      <span class="fw-light"><em>4 hours ago</em></span>
+                    </div><!-- end column-->
+                  </div><!-- end row-->
                   {{ end }}
                   {{ end }}
-                  <span>| <span class="fw-light"><em>4 hours ago</em></span></span>
+                  <!--end the display of the profile and actual name-->
                 </div><!-- end col-->
               </div><!-- end row-->
               <div class="thread__body__reply__inner">
@@ -158,8 +213,16 @@
                     style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
                 </div><!-- end col-->
                 <div class="col p-0">
-                  randomuser901
-                  <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                  <!-- start of user name display -->
+                  <div class="row justify-content-start align-items-center">
+                    <div class="col-auto border-secondary-subtle border-end">
+                      randomuser901
+                    </div><!-- end col auto-->
+                    <div class="col-auto">
+                      <span class="fw-light"><em>6 hours ago</em></span>
+                    </div><!-- end column-->
+                  </div><!--end row-->
+                  <!-- end of user name display -->
                 </div><!-- end col-->
               </div><!-- end row-->
               <!---- END USER DATA ROW ------>
@@ -174,7 +237,17 @@
                       <div class="headshot mb-0"
                         style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
                     </div><!-- end col-->
-                    <div class="col p-0"> rando6969 <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                    <div class="col p-0">
+                      <!-- start of user name display -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          rando6969
+                        </div><!-- end col auto-->
+                        <div class="col-auto">
+                          <span class="fw-light"><em>6 hours ago</em></span>
+                        </div><!-- end column-->
+                      </div><!--end row-->
+                      <!-- end of user name display -->
                     </div><!-- end col-->
                   </div><!-- end row-->
                   <div class="thread__body__reply__inner">
@@ -190,8 +263,16 @@
                           <div class="headshot mb-0"
                             style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
                         </div><!-- end col-->
-                        <div class="col p-0">randomguy1986 <span>| <span class="fw-light"><em>2 hours
-                                ago</em></span></span>
+                        <div class="col p-0"><!-- start of user name display -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              randomguy1986
+                            </div><!-- end col auto-->
+                            <div class="col-auto">
+                              <span class="fw-light"><em>6 hours ago</em></span>
+                            </div><!-- end column-->
+                          </div><!--end row-->
+                          <!-- end of user name display -->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -216,10 +297,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>6 hours ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -244,10 +336,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>2 hours ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -269,10 +372,21 @@
                                 style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                             </div><!-- end col-->
                             <div class="col p-0">
-                              {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                              <!---- start the display of the profile and actual name -->
+                              <div class="row justify-content-start align-items-center">
+                                <div class="col-auto border-secondary-subtle border-end">
+                                  <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                      {{$user.profile.actualname }}</div>
+                                  </div>
+                                </div><!-- end column-->
+
+                                <div class="col-auto">
+                                  <span class="fw-light"><em>6 hours ago</em></span>
+                                </div><!-- end column-->
+                              </div><!-- end row-->
                               {{ end }}
                               {{ end }}
-                              <span>| <span class="fw-light"><em>1 hour ago</em></span></span>
+                              <!--end the display of the profile and actual name-->
                             </div><!-- end col-->
                           </div><!-- end row-->
                           <div class="thread__body__reply__inner">
@@ -307,8 +421,16 @@
                     style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
                 </div><!-- end col-->
                 <div class="col p-0">
-                  randomuser901
-                  <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                  <!-- start of user name display -->
+                  <div class="row justify-content-start align-items-center">
+                    <div class="col-auto border-secondary-subtle border-end">
+                      randomuser4593
+                    </div><!-- end col auto-->
+                    <div class="col-auto">
+                      <span class="fw-light"><em>6 hours ago</em></span>
+                    </div><!-- end column-->
+                  </div><!--end row-->
+                  <!-- end of user name display -->
                 </div><!-- end col-->
               </div><!-- end row-->
               <!---- END USER DATA ROW ------>
@@ -334,10 +456,21 @@
                   </div>
                 </div><!-- end col-->
                 <div class="col p-0">
-                  {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                  <!---- start the display of the profile and actual name -->
+                  <div class="row justify-content-start align-items-center">
+                    <div class="col-auto border-secondary-subtle border-end">
+                      <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                          {{$user.profile.actualname }}</div>
+                      </div>
+                    </div><!-- end column-->
+
+                    <div class="col-auto">
+                      <span class="fw-light"><em>2 hours ago</em></span>
+                    </div><!-- end column-->
+                  </div><!-- end row-->
                   {{ end }}
                   {{ end }}
-                  <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                  <!--end the display of the profile and actual name-->
                 </div><!-- end col-->
               </div><!-- end row-->
               <!---- END USER DATA ROW ------>
@@ -349,7 +482,7 @@
                 <!---- NESTED REPLY TO LOOKS LIKE SHOOTER iS LEAVING-->
                 <div class="thread__body__reply__nested">
                   <!---- START USER DATA ROW ------>
-                  {{ $targetIndex := 12 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                  {{ $targetIndex := 9 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
                   {{ range $index, $user := .Site.Data.users }}
                   {{ if eq $index $targetIndex }}
                   <div class="row align-items-center justify-content-md-center">
@@ -358,10 +491,21 @@
                         style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                     </div><!-- end col-->
                     <div class="col p-0">
-                      {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                              {{$user.profile.actualname }}</div>
+                          </div>
+                        </div><!-- end column-->
+
+                        <div class="col-auto">
+                          <span class="fw-light"><em>2 hours ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
                       {{ end }}
                       {{ end }}
-                      <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                      <!--end the display of the profile and actual name-->
                     </div><!-- end col-->
                   </div><!-- end row-->
                   <div class="thread__body__reply__inner">
@@ -382,10 +526,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>2 hours ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -411,10 +566,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>2 hours ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -438,10 +604,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>2 hours ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -466,10 +643,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>1 hour ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -494,10 +682,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>2 hours ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -522,10 +721,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>2 hours ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -550,10 +760,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>45 minutes ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
@@ -578,10 +799,21 @@
                             style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
-                          {{ $user.profile.name }} <span class="actualname">{{$user.profile.actualname }}</span>
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">
+                                  {{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+
+                            <div class="col-auto">
+                              <span class="fw-light"><em>30 minutes ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
                           {{ end }}
                           {{ end }}
-                          <span>| <span class="fw-light"><em>2 hours ago</em></span></span>
+                          <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">

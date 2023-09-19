@@ -138,6 +138,9 @@ h1, h2, h3, h4 {color: #161E37;}
     img {
       margin: $spacer * 3 auto;
     }//end img 
+            @include media-breakpoint-down(sm) {
+              padding: $spacer !important;
+            }//breakpoint
 }//end hero
 
 .thread {
@@ -170,6 +173,8 @@ h1, h2, h3, h4 {color: #161E37;}
     margin-left: 23px;
     padding-left: $spacer * 2;
     margin-bottom: $spacer * 2;
+    padding-top: $spacer; 
+    //padding-bottom: $spacer;
 
   }//end reply inner 
 
@@ -228,7 +233,7 @@ h1, h2, h3, h4 {color: #161E37;}
 }///end profile 
 
 .actualname {
-  font-size: 11px;
+  font-size: 13px;
   font-style: italic;
     &::before {
       content: "(";
@@ -236,4 +241,9 @@ h1, h2, h3, h4 {color: #161E37;}
     &::after {
       content: ")";
     }
+}
+
+.tag {
+  color: $green-500;
+  font-weight: bold;
 }

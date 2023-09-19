@@ -6,7 +6,7 @@
 <div class="container-xxl mt-3">
   <h2 class="text-center mb-3">Popular</h2>
   <div class="row">
-      <div class="col-lg-4 col-sm-12">
+      <div class="col-lg-4 col-sm-12 mb-3">
         {{ $targetUser := index .Site.Data.users 6 }}
         {{ $extendedProfile := merge $targetUser.profile (dict
         "storyName" "Welcome to Shooter X"
@@ -15,14 +15,14 @@
         "date" "Sep 24, 2023"
         "likes" "300"
         "comments" "20"
-        "class" "h-100"
+        "class" "h-100 border-secondary"
         "featuredimg" "/docs/5.3/assets/img/18-hole.jpg"
-        "activity" "Someone replied to this thread"
+        "activity" "Vernodamous replied to this thread"
         ) }}
         {{ partial "pieces/card" $extendedProfile }}
       </div><!-- end column-->
       
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-lg-4 col-sm-12 mb-3">
       {{ $targetUser := index .Site.Data.users 2 }}
       {{ $extendedProfile := merge $targetUser.profile (dict
       "storyName" "Data is beautiful"
@@ -38,7 +38,7 @@
       {{ partial "pieces/card" $extendedProfile }}
     </div><!-- end column-->
  
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-lg-4 col-sm-12 mb-3">
       {{ $targetUser := index .Site.Data.users 1 }}
       {{ $extendedProfile := merge $targetUser.profile (dict
       "storyName" "This is a story"
@@ -60,12 +60,12 @@
   <div class="col-lg-8">
       {{ $targetUser := index .Site.Data.users 3 }}
       {{ $extendedProfile := merge $targetUser.profile (dict
-      "storyName" "This is a story"
-      "storyDescription" (printf "Custom description for this story")
-      "storyURL" "https://custom-url.com"
-      "date" "Aug XX, 2023"
-      "likes" "41k"
-      "comments" "100"
+      "storyName" "Team TN strategy roundtable"
+      "storyDescription" (printf "Another year, another Shooter! Let's get this thing rolling fellas. I wanna hear all your thoughts this year for how we can continue the win streak.")
+      "storyURL" "/teamtn.html"
+      "date" "January 1, 2023"
+      "likes" "300"
+      "comments" "35"
       "activity" "jsto44 replied to a thread"
 
       ) }}

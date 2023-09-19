@@ -6,7 +6,7 @@
         <div class="col-lg-9 col-xl-9 col-sm-12">
           <div class="thread border bg-light p-0 m-0 rounded-2">
             <div class="thread__header bg-secondary-subtle p-2">
-              {{ $targetIndex := 6 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+              {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
               {{ range $index, $user := .Site.Data.users }}
               {{ if eq $index $targetIndex }}
               <div class="row align-items-center justify-content-md-center">
@@ -22,7 +22,7 @@
                       </div><!-- end column-->
                   
                       <div class="col-auto">
-                        <strong>Sep 24, 2023</strong>
+                        <strong>January 1, 2023</strong>
                       </div><!-- end column-->
                     </div><!-- end row-->
                     {{ end }}
@@ -34,90 +34,111 @@
 
             <div class="thread__body p-3">
               <!-- start of the main post-->
-              <h2>Shooter X</h2>
-              <p>Fellas, welcome to Shooter X. This year starts with a new location and an opportunity to be one of the most memorable
-              Shooters ever. This website is a collection of past, present, and future. Let’s get this shit started by watching the
-              video below.</p>
+              <h2>Team TN strategy roundtable</h2>
+              <p>Alright team, strategy packets were sent in November, if you didn’t receive you should have digital copies in your inbox. Please do readings 1a - 55b ahead of our first strategy summit in Q1. On top of the usual homework, I would like to take this time to share a very vital video with you that Emily and I watch every night. Let’s do this!</p>
 
                 <!-- another video example-->
                 <div class="ratio ratio-16x9">
-                  <video width="1200" height="675" controls>
-                    <source src="/docs/5.3/assets/img/videos/shooter-hype.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                    Your browser does not support the video tag.
-                  </video>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jxcMRkqaQdw?si=RvGVCSO5yPeMtLBa"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
                 </div><!-- end video block-->
                 <!-- end video example-->
               <!-- end of the main post -->
 
               <h4 class="text-center mt-3 mb-3">Replies</h4>
               <!---------------------------------Start Thread Reply ----------------------------------->
+                <!------- this is the start of a reply block #2 -------->
+                <div class="thread__body__reply">
+                  {{ $targetIndex := 4 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                  {{ range $index, $user := .Site.Data.users }}
+                  {{ if eq $index $targetIndex }}
+                  <div class="row align-items-center justify-content-md-center">
+                    <div class="col-auto">
+                      <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                    </div><!-- end col-->
+                    <div class="col p-0">
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
+                          </div>
+                        </div><!-- end column-->
+                
+                        <div class="col-auto">
+                          <span class="fw-light"><em>9 months ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
+                      {{ end }}
+                      {{ end }}
+                      <!--end the display of the profile and actual name-->
+                    </div><!-- end col-->
+                  </div><!-- end row-->
+                  <div class="thread__body__reply__inner">
+                    <p>Letsssss go! Reporting to duty Capn'. Can't wait for the Q1 meeting, want to pick your brain about reading 17b in the packet. My mind is blown! &#129327;</p>
+                    <div class="thread__body__likes">
+                      <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+                  </div><!-- end reply inner-->
+                </div>
+                <!-------- this is the end of a reply block #2 --------->
+
+              
               <!-- this is the start of a reply block #1-->
               <div class="thread__body__reply">
-                {{ $targetIndex := 1 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
-                {{ range $index, $user := .Site.Data.users }}
-                {{ if eq $index $targetIndex }}
                 <div class="row align-items-center justify-content-md-center">
                   <div class="col-auto">
-                    <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                    <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
                   </div><!-- end col-->
                   <div class="col p-0">
                     <!---- start the display of the profile and actual name -->
                     <div class="row justify-content-start align-items-center">
                       <div class="col-auto border-secondary-subtle border-end">
-                        <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
-                        </div>
+                        <div class="profilename">randomshooterfan901</div>
                       </div><!-- end column-->
                     
                       <div class="col-auto">
-                        <span class="fw-light"><em>6 hours ago</em></span>
+                        <span class="fw-light"><em>8 months ago</em></span>
                       </div><!-- end column-->
                     </div><!-- end row-->
-                    {{ end }}
-                    {{ end }}
                     <!--end the display of the profile and actual name-->
                   </div><!-- end col-->
                 </div><!-- end row-->
                 <!-------------- start lets go bitches reply inner ------------>
                 <div class="thread__body__reply__inner">
-                  <p>Let’s go bitches! SIP is so screwed.</p>
+                  <p>Wonder if team TN plans to just roll out the same strategy as the last two years?</p>
                   <div class="thread__body__likes">
-                    <div class="likes-container"><span class="likes"></span> <span>22</span></div><!-- end container-->
+                    <div class="likes-container"><span class="likes"></span> <span>2</span></div><!-- end container-->
                   </div><!-- end likes container-->
                   <!--------- nested reply Dave laughing GIF -------->
                     <div class="thread__body__reply__nested">
-                      {{ $targetIndex := 12 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
-                      {{ range $index, $user := .Site.Data.users }}
-                      {{ if eq $index $targetIndex }}
                       <div class="row align-items-center justify-content-md-center">
                         <div class="col-auto">
-                          <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                          <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
                         </div><!-- end col-->
                         <div class="col p-0">
                           <!---- start the display of the profile and actual name -->
                           <div class="row justify-content-start align-items-center">
                             <div class="col-auto border-secondary-subtle border-end">
-                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
-                              </div>
+                              <div class="profilename">randomfan1</div>
                             </div><!-- end column-->
                         
                             <div class="col-auto">
-                              <span class="fw-light"><em>3 hours ago</em></span>
+                              <span class="fw-light"><em>8 months ago</em></span>
                             </div><!-- end column-->
                           </div><!-- end row-->
-                          {{ end }}
-                          {{ end }}
                           <!--end the display of the profile and actual name-->
                         </div><!-- end col-->
                       </div><!-- end row-->
                       <div class="thread__body__reply__inner">
-                        <p><img src="https://media.giphy.com/media/gj0QdZ9FgqGhOBNlFS/giphy.gif" class="img-fluid"/></p>
+                        <p>If it aint broke why would they fix it? They have defeated the Podfather and The Dave Bailey non pod/pod system…</p>
                         <div class="thread__body__likes">
-                          <div class="likes-container"><span class="likes"></span> <span>12</span></div><!-- end container-->
+                          <div class="likes-container"><span class="likes"></span> <span>100</span></div><!-- end container-->
                         </div><!-- end likes container-->
 
                             <div class="thread__body__reply__nested">
-                              {{ $targetIndex := 14 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                              {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
                               {{ range $index, $user := .Site.Data.users }}
                               {{ if eq $index $targetIndex }}
                               <div class="row align-items-center justify-content-md-center">
@@ -133,7 +154,7 @@
                                     </div><!-- end column-->
                                 
                                     <div class="col-auto">
-                                      <span class="fw-light"><em>2 hours ago</em></span>
+                                      <span class="fw-light"><em>8 months ago</em></span>
                                     </div><!-- end column-->
                                   </div><!-- end row-->
                                   {{ end }}
@@ -142,7 +163,7 @@
                                 </div><!-- end col-->
                               </div><!-- end row-->
                               <div class="thread__body__reply__inner">
-                                <p>Read my mind Dave. These boys don't know what is coming</p>
+                                <p>Respectfully, we are anti pods in this state.</p>
                                 <div class="thread__body__likes">
                                   <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
                                 </div><!-- end likes container-->
@@ -155,43 +176,8 @@
                   <!--------- end nested reply Dave laughing GIF ------->
                 </div><!-------------- end lets go bitches reply inner ------------>
               </div><!-- this is the end of a reply block #1-->
-            
-              <!------- this is the start of a reply block #2 -------->
-              <div class="thread__body__reply">
-                {{ $targetIndex := 7 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
-                {{ range $index, $user := .Site.Data.users }}
-                {{ if eq $index $targetIndex }}
-                <div class="row align-items-center justify-content-md-center">
-                  <div class="col-auto">
-                    <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
-                  </div><!-- end col-->
-                  <div class="col p-0">
-                    <!---- start the display of the profile and actual name -->
-                    <div class="row justify-content-start align-items-center">
-                      <div class="col-auto border-secondary-subtle border-end">
-                        <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
-                        </div>
-                      </div><!-- end column-->
-                  
-                      <div class="col-auto">
-                        <span class="fw-light"><em>4 hours ago</em></span>
-                      </div><!-- end column-->
-                    </div><!-- end row-->
-                    {{ end }}
-                    {{ end }}
-                    <!--end the display of the profile and actual name-->
-                  </div><!-- end col-->
-                </div><!-- end row-->
-                <div class="thread__body__reply__inner">
-                  <p><img src="https://media.giphy.com/media/gSl7e703puA6tSSfqW/giphy.gif" class="img-fluid" /></p>
-                  <div class="thread__body__likes">
-                    <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
-                  </div><!-- end likes container-->
-                </div><!-- end reply inner-->
-              </div>
-              <!-------- this is the end of a reply block #2 --------->
 
-              <!---------- this is the start of a reply block #3 --------->
+              <!---------- this is the start of a reply block #2 --------->
               <div class="thread__body__reply">
                 <!---- START USER DATA ROW ------>
                   <div class="row align-items-center justify-content-md-center">
@@ -202,10 +188,10 @@
                         <!-- start of user name display -->
                         <div class="row justify-content-start align-items-center">
                           <div class="col-auto border-secondary-subtle border-end">
-                            randomuser901
+                            definitelynotZack
                           </div><!-- end col auto-->
                           <div class="col-auto">
-                            <span class="fw-light"><em>6 hours ago</em></span>
+                            <span class="fw-light"><em>7 months ago</em></span>
                           </div><!-- end column-->
                         </div><!--end row-->
                         <!-- end of user name display -->
@@ -215,28 +201,35 @@
                 
                 <!--- START of nested REPLY #1 looks like... --->
                   <div class="thread__body__reply__inner">
-                      <p>Looks like The Shooter is leaving the state of MS!</p>
+                      <p>You gonna try anything new? <span class="tag">@DonTomasino</span></p> 
                             <!---- NESTED REPLY TO LOOKS LIKE SHOOTER iS LEAVING-->
                             <div class="thread__body__reply__nested">
-                              <div class="row align-items-center justify-content-md-center">
-                                <div class="col-auto">
-                                  <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
-                                </div><!-- end col-->
-                                <div class="col p-0"> 
-                                  <!-- start of user name display -->
-                                  <div class="row justify-content-start align-items-center">
-                                    <div class="col-auto border-secondary-subtle border-end">
-                                      rando6969
-                                      </div><!-- end col auto-->
-                                    <div class="col-auto">
-                                      <span class="fw-light"><em>6 hours ago</em></span>
-                                    </div><!-- end column-->
-                                    </div><!--end row-->
-                                  <!-- end of user name display -->
+                            {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                            {{ range $index, $user := .Site.Data.users }}
+                            {{ if eq $index $targetIndex }}
+                            <div class="row align-items-center justify-content-md-center">
+                              <div class="col-auto">
+                                <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                              </div><!-- end col-->
+                              <div class="col p-0">
+                                <!---- start the display of the profile and actual name -->
+                                <div class="row justify-content-start align-items-center">
+                                  <div class="col-auto border-secondary-subtle border-end">
+                                    <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
+                                    </div>
+                                  </div><!-- end column-->
+                            
+                                  <div class="col-auto">
+                                    <span class="fw-light"><em>7 months ago</em></span>
+                                  </div><!-- end column-->
+                                </div><!-- end row-->
+                                {{ end }}
+                                {{ end }}
+                                <!--end the display of the profile and actual name-->
                                 </div><!-- end col-->
                               </div><!-- end row-->
                               <div class="thread__body__reply__inner">
-                                <p>Might wanna check those facts, seems like they chose some place in Georgia? McLemore?</p>
+                                <p>I would have to kill you if I told you. <strong>#TheDon</strong></p>
                                 <div class="thread__body__likes">
                                   <div class="likes-container"><span class="likes"></span> <span>12</span></div><!-- end container-->
                                 </div><!-- end likes container-->
@@ -252,14 +245,14 @@
                                         randomguy1986
                                       </div><!-- end col auto-->
                                       <div class="col-auto">
-                                        <span class="fw-light"><em>6 hours ago</em></span>
+                                        <span class="fw-light"><em>7 months ago</em></span>
                                       </div><!-- end column-->
                                     </div><!--end row-->
                                     <!-- end of user name display -->
                                     </div><!-- end col-->
                                   </div><!-- end row-->
                                   <div class="thread__body__reply__inner">
-                                    <p>Wait what? Thought team TN was trying to get a home field advantage…</p>
+                                    <p>Whoa whoa whoa…easy there, us fans just want to know!</p>
                                     <div class="thread__body__likes">
                                       <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
                                     </div><!-- end likes container-->
@@ -268,41 +261,6 @@
                                 <!-- end nested reply BLOCK -->
                             
                                 <!----- NESTED REPLY BLOCK of MIGHT WANNA CHECK THOSE FACTS -->
-                                    <!---- NESTED REPLY BLOCK -->
-                                    <div class="thread__body__reply__nested">
-                                      {{ $targetIndex := 6 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
-                                      {{ range $index, $user := .Site.Data.users }}
-                                      {{ if eq $index $targetIndex }}
-                                      <div class="row align-items-center justify-content-md-center">
-                                        <div class="col-auto">
-                                          <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
-                                        </div><!-- end col-->
-                                        <div class="col p-0">
-                                          <!---- start the display of the profile and actual name -->
-                                          <div class="row justify-content-start align-items-center">
-                                            <div class="col-auto border-secondary-subtle border-end">
-                                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
-                                              </div>
-                                            </div><!-- end column-->
-                                        
-                                            <div class="col-auto">
-                                              <span class="fw-light"><em>6 hours ago</em></span>
-                                            </div><!-- end column-->
-                                          </div><!-- end row-->
-                                          {{ end }}
-                                          {{ end }}
-                                          <!--end the display of the profile and actual name-->
-                                        </div><!-- end col-->
-                                      </div><!-- end row-->
-                                      <div class="thread__body__reply__inner">
-                                        <p>Technically it’s in Georgia, but it’s close enough to TN…Plus those MS guys can’t read a map or state lines…</p>
-                                        <div class="thread__body__likes">
-                                          <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
-                                        </div><!-- end likes container-->
-                                      </div><!-- end reply inner-->
-                                    </div><!-- end reply-->
-                                    <!-- end nested reply BLOCK -->
-
                                     <!---- NESTED REPLY BLOCK -->
                                     <div class="thread__body__reply__nested">
                                       {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
@@ -321,7 +279,7 @@
                                             </div><!-- end column-->
                                         
                                             <div class="col-auto">
-                                              <span class="fw-light"><em>2 hours ago</em></span>
+                                              <span class="fw-light"><em>7 months ago</em></span>
                                             </div><!-- end column-->
                                           </div><!-- end row-->
                                           {{ end }}
@@ -330,14 +288,48 @@
                                         </div><!-- end col-->
                                       </div><!-- end row-->
                                       <div class="thread__body__reply__inner">
-                                        <p>Yeah they don’t recognize anything above the Mason Dixon line anyways</p>
+                                        <p>You’ll know when you know…</p>
                                         <div class="thread__body__likes">
                                           <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
+                                        </div><!-- end likes container-->
+                                      </div><!-- end reply inner-->
+                                    </div><!-- end reply-->
+                                    <!-- end nested reply BLOCK -->
+
+                                    <!---- NESTED REPLY BLOCK -->
+                                    <div class="thread__body__reply__nested">
+                                      {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                                      {{ range $index, $user := .Site.Data.users }}
+                                      {{ if eq $index $targetIndex }}
+                                      <div class="row align-items-center justify-content-md-center">
+                                        <div class="col-auto">
+                                          <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                                        </div><!-- end col-->
+                                        <div class="col p-0">
+                                          <!---- start the display of the profile and actual name -->
+                                          <div class="row justify-content-start align-items-center">
+                                            <div class="col-auto border-secondary-subtle border-end">
+                                              <div class="profilename">randomguy1986</div>
+                                            </div><!-- end column-->
+                                        
+                                            <div class="col-auto">
+                                              <span class="fw-light"><em>7 months ago</em></span>
+                                            </div><!-- end column-->
+                                          </div><!-- end row-->
+                                          {{ end }}
+                                          {{ end }}
+                                          <!--end the display of the profile and actual name-->
+                                        </div><!-- end col-->
+                                      </div><!-- end row-->
+                                      <div class="thread__body__reply__inner">
+                                        <p><img src="https://media.giphy.com/media/3owzW5c1tPq63MPmWk/giphy.gif" class="img-fluid"></p>
+                                          <div class="thread__body__likes">
+                                          <div class="likes-container"><span class="likes"></span> <span>2</span></div><!-- end container-->
                                         </div><!-- end likes container-->
                                             <!----- NESTED REPLY TO MASON DIXON LINE-->
                                             <!---- NESTED REPLY BLOCK -->
                                             <div class="thread__body__reply__nested">
-                                              {{ $targetIndex := 17 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                                              {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
                                               {{ range $index, $user := .Site.Data.users }}
                                               {{ if eq $index $targetIndex }}
                                               <div class="row align-items-center justify-content-md-center">
@@ -353,7 +345,7 @@
                                                     </div><!-- end column-->
                                                 
                                                     <div class="col-auto">
-                                                      <span class="fw-light"><em>6 hours ago</em></span>
+                                                      <span class="fw-light"><em>7 months ago</em></span>
                                                     </div><!-- end column-->
                                                   </div><!-- end row-->
                                                   {{ end }}
@@ -362,14 +354,50 @@
                                                 </div><!-- end col-->
                                               </div><!-- end row-->
                                               <div class="thread__body__reply__inner">
-                                                <p>Damn right!</p>
+                                                <p>Exactly.</p>
                                                 <div class="thread__body__likes">
                                                   <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
                                                 </div><!-- end likes container-->
                                               </div><!-- end reply inner-->
                                             </div><!-- end reply-->
                                             <!-- end nested reply BLOCK -->
+
+                                            <!---- NESTED REPLY BLOCK -->
+                                            <div class="thread__body__reply__nested">
+                                              {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                                              {{ range $index, $user := .Site.Data.users }}
+                                              {{ if eq $index $targetIndex }}
+                                              <div class="row align-items-center justify-content-md-center">
+                                                <div class="col-auto">
+                                                  <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                                                </div><!-- end col-->
+                                                <div class="col p-0">
+                                                  <!---- start the display of the profile and actual name -->
+                                                  <div class="row justify-content-start align-items-center">
+                                                    <div class="col-auto border-secondary-subtle border-end">
+                                                      <div class="profilename">randomfan1</div>
+                                                    </div><!-- end column-->
+                                            
+                                                    <div class="col-auto">
+                                                      <span class="fw-light"><em>7 months ago</em></span>
+                                                    </div><!-- end column-->
+                                                  </div><!-- end row-->
+                                                  {{ end }}
+                                                  {{ end }}
+                                                  <!--end the display of the profile and actual name-->
+                                                </div><!-- end col-->
+                                              </div><!-- end row-->
+                                              <div class="thread__body__reply__inner">
+                                                <p><img src="https://media.giphy.com/media/8v6Z3YyULB5Q0Skbac/giphy.gif" class="img-fluid"></p>
+                                                <div class="thread__body__likes">
+                                                  <div class="likes-container"><span class="likes"></span> <span>16</span></div><!-- end container-->
+                                                </div><!-- end likes container-->
+                                              </div><!-- end reply inner-->
+                                            </div><!-- end reply-->
+                                            <!-- end nested reply BLOCK -->
                                             <!----- END NESTED REPLY TO MASON DIXON LINE-->
+
+
                                       </div><!-- end reply inner-->
                                     </div><!-- end reply-->
                                     <!-- end nested reply BLOCK -->
@@ -381,42 +409,12 @@
                             <!----END NESTED REPLY TO LOOKS LIKE SHOOTER IS LEAVING-->
 
                   </div><!----- END thread__body nested reply #1 Looks like ----->
-              </div><!-------- this is the end of a reply block #3 ------>
+              </div><!-------- this is the end of a reply block #2 ------>
 
-                <!---------- this is the start of a reply block #4 --------->
-                <div class="thread__body__reply">
-                  <!---- START USER DATA ROW ------>
-                  <div class="row align-items-center justify-content-md-center">
-                    <div class="col-auto">
-                      <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
-                    </div><!-- end col-->
-                    <div class="col p-0">
-                      <!-- start of user name display -->
-                      <div class="row justify-content-start align-items-center">
-                        <div class="col-auto border-secondary-subtle border-end">
-                          randomuser4593
-                        </div><!-- end col auto-->
-                        <div class="col-auto">
-                          <span class="fw-light"><em>6 hours ago</em></span>
-                        </div><!-- end column-->
-                      </div><!--end row-->
-                      <!-- end of user name display -->
-                    </div><!-- end col-->
-                  </div><!-- end row-->
-                  <!---- END USER DATA ROW ------>
-                
-                  <!--- START of nested REPLY #1 looks like... --->
-                  <div class="thread__body__reply__inner">
-                    <p>This course looks sick! Golf Digest ranks the 18th hole as one of the best finishing holes in the country!!</p>
-                      <img src="/docs/5.3/assets/img/18-hole.jpg" class="img-fluid"/>
-                    </p>
-                  </div><!----- END thread__body nested reply #1 Looks like ----->
-                </div><!-------- this is the end of a reply block #4 ------>
-
-                  <!---------- this is the start of a reply block #5 --------->
+                  <!---------- this is the start of a reply block #3 --------->
                   <div class="thread__body__reply">
                     <!---- START USER DATA ROW ------>
-                    {{ $targetIndex := 1 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                    {{ $targetIndex := 2 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
                     {{ range $index, $user := .Site.Data.users }}
                     {{ if eq $index $targetIndex }}
                     <div class="row align-items-center justify-content-md-center">
@@ -432,7 +430,7 @@
                           </div><!-- end column-->
                       
                           <div class="col-auto">
-                            <span class="fw-light"><em>2 hours ago</em></span>
+                            <span class="fw-light"><em>4 months ago</em></span>
                           </div><!-- end column-->
                         </div><!-- end row-->
                         {{ end }}
@@ -444,11 +442,11 @@
                   
                     <!--- START of nested REPLY #1 looks like... --->
                     <div class="thread__body__reply__inner">
-                      <p>Can’t believe I’m gonna be that close to Knoxville on a college football Saturday and not be in Neyland!!! Revenge game against South Carolina too!!</p>
+                      <p>Guys, we trust The Don, so should you… we aint coming home empty handed</p>
                       <!---- NESTED REPLY TO LOOKS LIKE SHOOTER iS LEAVING-->
                       <div class="thread__body__reply__nested">
                         <!---- START USER DATA ROW ------>
-                        {{ $targetIndex := 9 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                        {{ $targetIndex := 7 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
                         {{ range $index, $user := .Site.Data.users }}
                         {{ if eq $index $targetIndex }}
                         <div class="row align-items-center justify-content-md-center">
@@ -464,7 +462,7 @@
                               </div><!-- end column-->
                           
                               <div class="col-auto">
-                                <span class="fw-light"><em>2 hours ago</em></span>
+                                <span class="fw-light"><em>4 months ago</em></span>
                               </div><!-- end column-->
                             </div><!-- end row-->
                             {{ end }}
@@ -473,50 +471,14 @@
                           </div><!-- end col-->
                         </div><!-- end row-->
                         <div class="thread__body__reply__inner">
-                          <p>Gonna get blown out in Knox and in TennaGeorgiaSee too</p>
+                          <p>Or emptied shouldered…</p>
+                          <p><img src="/docs/5.3/assets/img/MVP-2023.jpg" class="img-fluid" width="300"></p>
                           <div class="thread__body__likes">
                             <div class="likes-container"><span class="likes"></span> <span>12</span></div><!-- end container-->
                           </div><!-- end likes container-->
                           <!---- NESTED REPLY BLOCK -->
                           <div class="thread__body__reply__nested">
                             <!---- START USER DATA ROW ------>
-                            {{ $targetIndex := 1 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
-                            {{ range $index, $user := .Site.Data.users }}
-                            {{ if eq $index $targetIndex }}
-                            <div class="row align-items-center justify-content-md-center">
-                              <div class="col-auto">
-                                <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
-                              </div><!-- end col-->
-                              <div class="col p-0">
-                                <!---- start the display of the profile and actual name -->
-                                <div class="row justify-content-start align-items-center">
-                                  <div class="col-auto border-secondary-subtle border-end">
-                                    <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
-                                    </div>
-                                  </div><!-- end column-->
-                              
-                                  <div class="col-auto">
-                                    <span class="fw-light"><em>2 hours ago</em></span>
-                                  </div><!-- end column-->
-                                </div><!-- end row-->
-                                {{ end }}
-                                {{ end }}
-                                <!--end the display of the profile and actual name-->
-                              </div><!-- end col-->
-                            </div><!-- end row-->
-                            <div class="thread__body__reply__inner">
-                              <p>Worry about your own teams and Austin driving you off the mountain on 18… </p>
-                              <img src="https://media.giphy.com/media/xTcnSP3760y1ZhcG4g/giphy.gif" class="img-fluid" >
-                              <div class="thread__body__likes">
-                                <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
-                              </div><!-- end likes container-->
-                            </div><!-- end reply inner-->
-                          </div><!-- end reply-->
-                          <!-- end nested reply BLOCK -->
-
-                          <!----- NESTED REPLY BLOCK of MIGHT WANNA CHECK THOSE FACTS -->
-                          <!---- NESTED REPLY BLOCK -->
-                          <div class="thread__body__reply__nested">
                             {{ $targetIndex := 5 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
                             {{ range $index, $user := .Site.Data.users }}
                             {{ if eq $index $targetIndex }}
@@ -533,7 +495,7 @@
                                   </div><!-- end column-->
                               
                                   <div class="col-auto">
-                                    <span class="fw-light"><em>2 hours ago</em></span>
+                                    <span class="fw-light"><em>4 months ago</em></span>
                                   </div><!-- end column-->
                                 </div><!-- end row-->
                                 {{ end }}
@@ -542,7 +504,43 @@
                               </div><!-- end col-->
                             </div><!-- end row-->
                             <div class="thread__body__reply__inner">
-                              <p><img src="https://media.giphy.com/media/l4FATJpd4LWgeruTK/giphy.gif" class="img-fluid"></p>
+                              <p>HEYYYOOO</p>
+                              <div class="thread__body__likes">
+                                <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
+                              </div><!-- end likes container-->
+                            </div><!-- end reply inner-->
+                          </div><!-- end reply-->
+                          <!-- end nested reply BLOCK -->
+
+                          <!----- NESTED REPLY BLOCK of MIGHT WANNA CHECK THOSE FACTS -->
+                          <!---- NESTED REPLY BLOCK -->
+                          <div class="thread__body__reply__nested">
+                            {{ $targetIndex := 1 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                            {{ range $index, $user := .Site.Data.users }}
+                            {{ if eq $index $targetIndex }}
+                            <div class="row align-items-center justify-content-md-center">
+                              <div class="col-auto">
+                                <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                              </div><!-- end col-->
+                              <div class="col p-0">
+                                <!---- start the display of the profile and actual name -->
+                                <div class="row justify-content-start align-items-center">
+                                  <div class="col-auto border-secondary-subtle border-end">
+                                    <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
+                                    </div>
+                                  </div><!-- end column-->
+                              
+                                  <div class="col-auto">
+                                    <span class="fw-light"><em>4 months ago</em></span>
+                                  </div><!-- end column-->
+                                </div><!-- end row-->
+                                {{ end }}
+                                {{ end }}
+                                <!--end the display of the profile and actual name-->
+                              </div><!-- end col-->
+                            </div><!-- end row-->
+                            <div class="thread__body__reply__inner">
+                              <p>WOOO!</p>
                               <div class="thread__body__likes">
                                 <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
                               </div><!-- end likes container-->
@@ -568,7 +566,7 @@
                                   </div><!-- end column-->
                               
                                   <div class="col-auto">
-                                    <span class="fw-light"><em>2 hours ago</em></span>
+                                    <span class="fw-light"><em>4 months ago</em></span>
                                   </div><!-- end column-->
                                 </div><!-- end row-->
                                 {{ end }}
@@ -577,7 +575,7 @@
                               </div><!-- end col-->
                             </div><!-- end row-->
                             <div class="thread__body__reply__inner">
-                              <p><img src="https://media.giphy.com/media/6g8XtfomGPqjS/giphy.gif" class="img-fluid"></p>
+                              <p><img src="https://media.giphy.com/media/3lIgOk4Gjfptu/giphy.gif" class="img-fluid"></p>
                               <div class="thread__body__likes">
                                 <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
                               </div><!-- end likes container-->
@@ -588,7 +586,7 @@
 
                           <!---- NESTED REPLY BLOCK -->
                           <div class="thread__body__reply__nested">
-                            {{ $targetIndex := 4 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                            {{ $targetIndex := 0 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
                             {{ range $index, $user := .Site.Data.users }}
                             {{ if eq $index $targetIndex }}
                             <div class="row align-items-center justify-content-md-center">
@@ -604,7 +602,7 @@
                                   </div><!-- end column-->
                               
                                   <div class="col-auto">
-                                    <span class="fw-light"><em>1 hour ago</em></span>
+                                    <span class="fw-light"><em>3 months ago</em></span>
                                   </div><!-- end column-->
                                 </div><!-- end row-->
                                 {{ end }}
@@ -613,7 +611,7 @@
                               </div><!-- end col-->
                             </div><!-- end row-->
                             <div class="thread__body__reply__inner">
-                              <p><img src="https://media.giphy.com/media/hWoxxmwzwUDt1QZFiZ/giphy.gif" class="img-fluid"></p>
+                              <p>Hail State!</p>
                               <div class="thread__body__likes">
                                 <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
                               </div><!-- end likes container-->
@@ -624,7 +622,7 @@
 
                           <!---- NESTED REPLY BLOCK -->
                           <div class="thread__body__reply__nested">
-                            {{ $targetIndex := 11 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                            {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
                             {{ range $index, $user := .Site.Data.users }}
                             {{ if eq $index $targetIndex }}
                             <div class="row align-items-center justify-content-md-center">
@@ -640,7 +638,7 @@
                                   </div><!-- end column-->
                               
                                   <div class="col-auto">
-                                    <span class="fw-light"><em>2 hours ago</em></span>
+                                    <span class="fw-light"><em>1 month ago</em></span>
                                   </div><!-- end column-->
                                 </div><!-- end row-->
                                 {{ end }}
@@ -649,7 +647,7 @@
                               </div><!-- end col-->
                             </div><!-- end row-->
                             <div class="thread__body__reply__inner">
-                              <p>Passenger only for me!</p>
+                              <p><img src="/docs/5.3/assets/img/trust-process.jpg" class="img-fluid" width="300"></p>
                               <div class="thread__body__likes">
                                 <div class="likes-container"><span class="likes"></span> <span>15</span></div><!-- end container-->
                               </div><!-- end likes container-->
@@ -658,114 +656,6 @@
                           </div><!-- end reply-->
                           <!-- end nested reply BLOCK -->
 
-                          <!---- NESTED REPLY BLOCK -->
-                          <div class="thread__body__reply__nested">
-                            {{ $targetIndex := 2 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
-                            {{ range $index, $user := .Site.Data.users }}
-                            {{ if eq $index $targetIndex }}
-                            <div class="row align-items-center justify-content-md-center">
-                              <div class="col-auto">
-                                <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
-                              </div><!-- end col-->
-                              <div class="col p-0">
-                                <!---- start the display of the profile and actual name -->
-                                <div class="row justify-content-start align-items-center">
-                                  <div class="col-auto border-secondary-subtle border-end">
-                                    <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
-                                    </div>
-                                  </div><!-- end column-->
-                              
-                                  <div class="col-auto">
-                                    <span class="fw-light"><em>2 hours ago</em></span>
-                                  </div><!-- end column-->
-                                </div><!-- end row-->
-                                {{ end }}
-                                {{ end }}
-                                <!--end the display of the profile and actual name-->
-                              </div><!-- end col-->
-                            </div><!-- end row-->
-                            <div class="thread__body__reply__inner">
-                              <p><span class="tag">@CashIsKing</span> take the wheel!!</p>
-                              <div class="thread__body__likes">
-                                <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
-                              </div><!-- end likes container-->
-                          
-                            </div><!-- end reply inner-->
-                          </div><!-- end reply-->
-                          <!-- end nested reply BLOCK -->
-
-                          <!---- NESTED REPLY BLOCK -->
-                          <div class="thread__body__reply__nested">
-                            {{ $targetIndex := 15 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
-                            {{ range $index, $user := .Site.Data.users }}
-                            {{ if eq $index $targetIndex }}
-                            <div class="row align-items-center justify-content-md-center">
-                              <div class="col-auto">
-                                <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
-                              </div><!-- end col-->
-                              <div class="col p-0">
-                                <!---- start the display of the profile and actual name -->
-                                <div class="row justify-content-start align-items-center">
-                                  <div class="col-auto border-secondary-subtle border-end">
-                                    <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
-                                    </div>
-                                  </div><!-- end column-->
-                              
-                                  <div class="col-auto">
-                                    <span class="fw-light"><em>45 minutes ago</em></span>
-                                  </div><!-- end column-->
-                                </div><!-- end row-->
-                                {{ end }}
-                                {{ end }}
-                                <!--end the display of the profile and actual name-->
-                              </div><!-- end col-->
-                            </div><!-- end row-->
-                            <div class="thread__body__reply__inner">
-                              <p>I’ll drive that cart so good!</p>
-                              <div class="thread__body__likes">
-                                <div class="likes-container"><span class="likes"></span> <span>4</span></div><!-- end container-->
-                              </div><!-- end likes container-->
-                          
-                            </div><!-- end reply inner-->
-                          </div><!-- end reply-->
-                          <!-- end nested reply BLOCK -->
-
-                          <!---- NESTED REPLY BLOCK -->
-                          <div class="thread__body__reply__nested">
-                            {{ $targetIndex := 14 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
-                            {{ range $index, $user := .Site.Data.users }}
-                            {{ if eq $index $targetIndex }}
-                            <div class="row align-items-center justify-content-md-center">
-                              <div class="col-auto">
-                                <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
-                              </div><!-- end col-->
-                              <div class="col p-0">
-                                <!---- start the display of the profile and actual name -->
-                                <div class="row justify-content-start align-items-center">
-                                  <div class="col-auto border-secondary-subtle border-end">
-                                    <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
-                                    </div>
-                                  </div><!-- end column-->
-                              
-                                  <div class="col-auto">
-                                    <span class="fw-light"><em>30 minutes ago</em></span>
-                                  </div><!-- end column-->
-                                </div><!-- end row-->
-                                {{ end }}
-                                {{ end }}
-                                <!--end the display of the profile and actual name-->
-                              </div><!-- end col-->
-                            </div><!-- end row-->
-                            <div class="thread__body__reply__inner">
-                              <p>That’s right ET you tell em!!</p>
-                              <div class="thread__body__likes">
-                                <div class="likes-container"><span class="likes"></span> <span>3</span></div><!-- end container-->
-                              </div><!-- end likes container-->
-                          
-                            </div><!-- end reply inner-->
-                          </div><!-- end reply-->
-                          <!-- end nested reply BLOCK -->
-                  
                           <!----- END NESTED REPLY BLOCK of MIGHT WANNA CHECK THOSE FACTS -->
                         </div><!-- end reply inner MIGHT WANNA CHECK THOSE FACTS-->
                   
