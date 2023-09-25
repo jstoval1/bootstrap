@@ -1,11 +1,27 @@
 <div class="card mb-3 rounded-2 {{.class}}">
   <div class="card-header">
-      <div class="headshot" style="background-image: url('{{ .headshot | relURL }}');"></div><!-- end headshot--> 
-      <h5 class="text-left">{{ .name }} <span>&#8226; {{ .date }} </span></h5>
-      <div class="clearfix"></div>
+          <div class="row align-items-center justify-content-md-center">
+            <div class="col-auto">
+              <div class="headshot mb-0" style="background-image: url('{{ .headshot | relURL }}');"></div>
+            </div><!-- end col-->
+            <div class="col">
+              <!---- start the display of the profile and actual name -->
+              <div class="row justify-content-start align-items-center">
+                <div class="col-auto border-secondary-subtle border-end">
+                  <div class="profilename">{{ .name }} <div class="actualname">{{ .actualname }}</div>
+                  </div>
+                </div><!-- end column-->
+          
+                <div class="col-auto">
+                  <strong>{{ .date }}</strong>
+                </div><!-- end column-->
+              </div><!-- end row-->
+              <!--end the display of the profile and actual name-->
+            </div><!-- end col-->
+          </div><!-- end row-->
   </div><!-- end card header-->
-  <img src="{{ .featuredimg }}" class="card-img-top rounded-0" />
-  <div class="card-body">
+  <div class="card-image card-img-top rounded-0" style="background-image: url('{{ .featuredimg  | relURL }}');"></div><!--end card image-->
+  <div class="card-body"> 
     <h4>{{ .storyName }}</h4>
     <p>{{ .storyDescription }}</p> <!-- Use the description parameter -->
     <a href="{{ .storyURL }}" class="card-link">Read more &#187</a> <!-- Use the URL parameter -->

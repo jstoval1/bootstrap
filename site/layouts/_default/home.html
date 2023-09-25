@@ -33,23 +33,23 @@
       "comments" "15"
       "class" "h-100"
       "featuredimg" "https://media.giphy.com/media/l3fZLMbuCOqJ82gec/giphy.gif"
-      "activity" "jsto44 replied to a thread"
+      "activity" "RyanAnderson replied to a thread"
       ) }} 
       {{ partial "pieces/card" $extendedProfile }}
     </div><!-- end column-->
  
     <div class="col-lg-4 col-sm-12 mb-3">
-      {{ $targetUser := index .Site.Data.users 1 }}
+      {{ $targetUser := index .Site.Data.users 18 }}
       {{ $extendedProfile := merge $targetUser.profile (dict
-      "storyName" "This is a story"
-      "storyDescription" (printf "Custom description for this story")
-      "storyURL" "https://custom-url.com"
-      "date" "Aug XX, 2023"
+      "storyName" "Ask me anything"
+      "storyDescription" (printf "Ask Slick Rick anything!")
+      "storyURL" "/slick-rick.html"
+      "date" "July 13, 2017"
       "likes" "41k"
-      "comments" "100"
+      "comments" "20"
       "class" "h-100"
-      "featuredimg" "https://placehold.co/300x100/000000/FFF"
-      "activity" "jsto44 replied to a thread"
+      "featuredimg" "/docs/5.3/assets/img/rick-guru.jpg"
+      "activity" "SlickRick52 replied to a thread"
       ) }}
       {{ partial "pieces/card" $extendedProfile }}
     </div><!-- end column-->
@@ -64,34 +64,37 @@
       "storyDescription" (printf "Another year, another Shooter! Let's get this thing rolling fellas. I wanna hear all your thoughts this year for how we can continue the win streak.")
       "storyURL" "/teamtn.html"
       "date" "January 1, 2023"
+      "class" "no-img"
       "likes" "300"
       "comments" "35"
-      "activity" "jsto44 replied to a thread"
+      "activity" "BluePillPhil replied to a thread"
 
       ) }}
       {{ partial "pieces/card" $extendedProfile }}
 
-      {{ $targetUser := index .Site.Data.users 1 }}
-      {{ $extendedProfile := merge $targetUser.profile (dict
-      "storyName" "This is a story"
-      "storyDescription" (printf "Custom description for this story")
-      "storyURL" "https://custom-url.com"
-      "date" "Aug XX, 2023"
-      "likes" "41k"
-      "comments" "100"
-      "activity" "jsto44 replied to a thread"
-      ) }}
-      {{ partial "pieces/card" $extendedProfile }}
+        {{ $targetUser := index .Site.Data.users 16 }}
+        {{ $extendedProfile := merge $targetUser.profile (dict
+        "storyName" "Team SIP does strategy!"
+        "storyDescription" (printf "R.I.P. Pod system. New year, new me.")
+        "storyURL" "/teamms.html"
+        "date" "August 15, 2023"
+        "class" "no-img"
+        "likes" "300"
+        "comments" "35"
+        "activity" "Randomdude601 replied to a thread"
+        ) }}
+        {{ partial "pieces/card" $extendedProfile }}
 
       {{ $targetUser := index .Site.Data.users 1 }}
       {{ $extendedProfile := merge $targetUser.profile (dict
-      "storyName" "This is a story"
-      "storyDescription" (printf "Custom description for this story")
-      "storyURL" "https://custom-url.com"
-      "date" "Aug XX, 2023"
-      "likes" "41k"
+      "storyName" "Tips & Tricks"
+      "storyDescription" (printf "One spot for all things golf. Dive in and join the community.")
+      "storyURL" "/tips-tricks.html"
+      "date" "March 2, 2018"
+      "class" "no-img"
+      "likes" "10k"
       "comments" "100"
-      "activity" "jsto44 replied to a thread"
+      "activity" "FratStar83 replied to a thread"
       ) }}
       {{ partial "pieces/card" $extendedProfile }}
   </div><!-- end col left-->
@@ -108,8 +111,8 @@
   <h3 class="text-center mt-3 mb-3">Top Contributors</h3>
   <div class="container border bg-light p-3 rounded-1">
   <div class="row">
-    <div class="col-lg-4">
-        {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+    <div class="col-4">
+        {{ $targetIndex := 6 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
         {{ range $index, $user := .Site.Data.users }}
         {{ if eq $index $targetIndex }}
         <div class="headshot mb-2" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div><!-- end headshot-->
@@ -119,7 +122,7 @@
         {{ end }}
     </div><!-- end col-->
 
-    <div class="col-lg-4">
+    <div class="col-4">
       {{ $targetIndex := 1 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
       {{ range $index, $user := .Site.Data.users }}
       {{ if eq $index $targetIndex }}
@@ -131,8 +134,8 @@
       {{ end }}
     </div><!-- end col-->
 
-      <div class="col-lg-4">
-        {{ $targetIndex := 1 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+      <div class="col-4">
+        {{ $targetIndex := 2 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
         {{ range $index, $user := .Site.Data.users }}
         {{ if eq $index $targetIndex }}
         <div class="headshot mb-2" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
@@ -147,14 +150,7 @@
   
   </div><!-- end container-->
  
-  <h3 class="text-center mt-3 mb-3">Weird</h3>
-  <ul class="list-group">
-    <li class="list-group-item"><a href="#">List item</a></li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-  </ul><!-- end ul-->
+  {{ partial "article-list.html" . }}
   </div><!-- end col right-->
 
 </div><!-- end row -->

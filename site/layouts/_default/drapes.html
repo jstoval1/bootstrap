@@ -1,0 +1,162 @@
+
+  {{ define "main" }}
+  <main class="" id="content">
+    <div class="container-xxl p-3">
+      <div class="row">
+        <div class="col-lg-9 col-xl-9 col-md-9 col-sm-12 mb-3">
+          <div class="thread border p-0 m-0 rounded-2">
+            <div class="thread__header bg-secondary-subtle p-2">
+              {{ $targetIndex := 7 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+              {{ range $index, $user := .Site.Data.users }}
+              {{ if eq $index $targetIndex }}
+              <div class="row align-items-center justify-content-md-center">
+                <div class="col-auto">
+                  <div class="headshot mb-0"style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                </div><!-- end col-->
+                <div class="col">
+                    <!---- start the display of the profile and actual name -->
+                    <div class="row justify-content-start align-items-center">
+                      <div class="col-auto border-secondary-subtle border-end">
+                        <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
+                        </div>
+                      </div><!-- end column-->
+                  
+                      <div class="col-auto">
+                        <strong>Oct, 19 2015</strong>
+                      </div><!-- end column-->
+                    </div><!-- end row-->
+                    {{ end }}
+                    {{ end }}
+                    <!--end the display of the profile and actual name-->
+                </div><!-- end col-->
+              </div><!-- end row-->
+            </div><!-- end thread__header-->
+
+            <div class="thread__body p-3">
+              <!-- start of the main post-->
+              {{ .Content }}
+              <!-- end of the main post -->
+
+              <h4 class="text-center mt-3 mb-3">Replies</h4>
+              <!---------------------------------Start Thread Reply ----------------------------------->
+                <!------- this is the start of a reply block #1 -------->
+                <div class="thread__body__reply">
+                {{ $targetIndex := 17 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                {{ range $index, $user := .Site.Data.users }}
+                {{ if eq $index $targetIndex }}
+                <div class="row align-items-center justify-content-md-center">
+                  <div class="col-auto">
+                    <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                  </div><!-- end col-->
+                  <div class="col p-0">
+                    <!---- start the display of the profile and actual name -->
+                    <div class="row justify-content-start align-items-center">
+                      <div class="col-auto border-secondary-subtle border-end">
+                        <div class="profilename">Randomfan256
+                        </div>
+                      </div><!-- end column-->
+                
+                      <div class="col-auto">
+                        <span class="fw-light"><em>8 years ago</em></span>
+                      </div><!-- end column-->
+                    </div><!-- end row-->
+                    {{ end }}
+                    {{ end }}
+                      <!--end the display of the profile and actual name-->
+                    </div><!-- end col-->
+                  </div><!-- end row-->
+                  <div class="thread__body__reply__inner">
+                    <p>Feels like there are some holes in this story, but we will trust you Mike. Let me spread the word to my Muscle Shoals connections, I have a few cousins that have worked at that B-dubs. </p>
+                    <div class="thread__body__likes">
+                      <div class="likes-container"><span class="likes"></span> <span>1</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+
+                    <!---- NESTED REPLY BLOCK -->
+                    <div class="thread__body__reply__nested">
+                      {{ $targetIndex := 7 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                      {{ range $index, $user := .Site.Data.users }}
+                      {{ if eq $index $targetIndex }}
+                      <div class="row align-items-center justify-content-md-center">
+                        <div class="col-auto">
+                          <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                        </div><!-- end col-->
+                        <div class="col p-0">
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">BuffaloRandy
+                              </div>
+                            </div><!-- end column-->
+                      
+                            <div class="col-auto">
+                              <span class="fw-light"><em>6 years ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
+                          {{ end }}
+                          {{ end }}
+                          <!--end the display of the profile and actual name-->
+                        </div><!-- end col-->
+                      </div><!-- end row-->
+                      <div class="thread__body__reply__inner">
+                        <p><span class="tag">@Licensed2Sell</span> Holy shit man, I think you may have put your drapes in my pickup! A buddy of mine showed me your post and I was like no way- that explains so much! So… since it has been a couple of years, I sold those drapes on Facebook marketplace to a nice old lady named Tammy. I reached out and she said that they have a great home and sent a pic. She mentioned that everything has a price and she would be willing to part with them for a lifetime of meals at B-dubs. Let me know what you think. 
+                          <img src="/docs/5.3/assets/img/drapes-dusty.jpg" class="img-fluid" width="400"></p>
+                        <div class="thread__body__likes">
+                          <div class="likes-container"><span class="likes"></span> <span>2</span></div><!-- end container-->
+                        </div><!-- end likes container-->
+                              <!---- NESTED REPLY BLOCK -->
+                              <div class="thread__body__reply__nested">
+                              {{ range $index, $user := .Site.Data.users }}
+                              {{ if eq $index $targetIndex }}
+                              <div class="row align-items-center justify-content-md-center">
+                                <div class="col-auto">
+                                  <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                                </div><!-- end col-->
+                                <div class="col">
+                                  <!---- start the display of the profile and actual name -->
+                                  <div class="row justify-content-start align-items-center">
+                                    <div class="col-auto border-secondary-subtle border-end">
+                                      <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
+                                      </div>
+                                    </div><!-- end column-->
+                              
+                                    <div class="col-auto">
+                                      <span class="fw-light"><em>6 years ago</em></span>
+                                    </div><!-- end column-->
+                                  </div><!-- end row-->
+                                  {{ end }}
+                                  {{ end }}
+                                    <!--end the display of the profile and actual name-->
+                                  </div><!-- end col-->
+                                </div><!-- end row-->
+                                <div class="thread__body__reply__inner">
+                                   <p><span class="tag">@BuffaloRandy</span> just DM’d you. Its been taken care of, looks like I am back in the Shooter baby! Can’t thank you enough. Next time I’m in the Shoals mozzy sticks on me! </p>
+                                  <div class="thread__body__likes">
+                                    <div class="likes-container"><span class="likes"></span> <span>2</span></div><!-- end container-->
+                                  </div><!-- end likes container-->
+                                </div><!-- end reply inner-->
+                              </div><!-- end reply-->
+                              <!---- END NESTED REPLY BLOCK ---->
+                      </div><!-- end reply inner-->
+                    </div><!-- end reply-->
+                    <!---- END NESTED REPLY BLOCK ---->                   
+                  </div><!-- end reply inner-->
+                </div>
+                <!-------- this is the end of a reply block #1 --------->
+
+              <!---------------------------------End Thread Reply ----------------------------------->
+            </div><!-- end MAIN THREAD body-->
+          </div><!--------- THIS ENDS THE ENTIRE THREAD --------->
+        </div><!-- THIS ends the column for the thread-->
+
+
+
+        <!-- start the sidebar-->
+        <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12">
+            {{ partial "sidebar.html" . }}
+        </div><!-- end sidebar-->
+
+      </div><!--end row-->
+    </div><!-- end container -->
+
+  </main>
+  {{ end }}

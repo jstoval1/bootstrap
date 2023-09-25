@@ -3,8 +3,8 @@
   <main class="" id="content">
     <div class="container-xxl p-3">
       <div class="row">
-        <div class="col-lg-9 col-xl-9 col-sm-12">
-          <div class="thread border bg-light p-0 m-0 rounded-2">
+        <div class="col-lg-9 col-xl-9 col-md-9 col-sm-12 mb-3">
+          <div class="thread border p-0 m-0 rounded-2">
             <div class="thread__header bg-secondary-subtle p-2">
               {{ $targetIndex := 3 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
               {{ range $index, $user := .Site.Data.users }}
@@ -677,7 +677,7 @@
 
 
         <!-- start the sidebar-->
-        <div class="col-lg-3 col-xl-3 col-sm-12">
+        <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12">
             {{ partial "sidebar.html" . }}
         </div><!-- end sidebar-->
 

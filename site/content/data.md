@@ -29,7 +29,7 @@ Adj Pts for career chart takes into consideration that the earlier years had few
 
 <!--- Team SIP ----->
 <h5 class="mt-3">TEAM SIP:</h5>
-<mark>For years of TN vs MS (2016, 17, 18, 21, 22)</mark>
+<mark>For the years of TN vs MS (2016, 17, 18, 21, 22)</mark>
 <div class="table-responsive mt-3"> 
 <table class="table table-striped table-sm table-bordered">
     <thead>
@@ -114,7 +114,7 @@ Adj Pts for career chart takes into consideration that the earlier years had few
 
 <!--- Team TN ----->
 <h5 class="mt-3">TEAM TN:</h5>
-<mark>For years of TN vs MS (2016, 17, 18, 21, 22)</mark>
+<mark>For the years of TN vs MS (2016, 17, 18, 21, 22)</mark>
 <div class="table-responsive mt-3">
     <table class="table table-striped table-sm table-bordered">
         <thead>
@@ -197,20 +197,19 @@ Adj Pts for career chart takes into consideration that the earlier years had few
 </div><!--- end table responsive wrap -->
 <!--- Team TN ----->
 
-<h5 class="mt-3">Lifetime Ratings</h5>
+<h5 class="mt-3">Lifetime Records on the SMI</h5>
 <div class="table-responsive mt-3">
     <table class="table table-striped table-sm table-bordered">
         <thead>
             <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Years on Tour</th>
-                <th scope="col">Rating</th>
-                <th scope="col">Adj. Pts per year</th>
                 <th scope="col">Overall Record</th>
                 <th scope="col">Overall Win %</th>
                 <th scope="col">Singles Record</th>
                 <th scope="col">Singles Win %</th>
                 <th scope="col">Captain</th>
+                <th scope="col">Cups as Captain</th>
                 <th scope="col">MVP’s</th>
                 <th scope="col">Cups</th>
             </tr>
@@ -219,86 +218,78 @@ Adj Pts for career chart takes into consideration that the earlier years had few
             <tr>
                 <td>Thomas</td> 
                 <td>10</td>
-                <td>0.696</td>
-                <td>1.82</td>
                 <td>25-11-2</td>
                 <td>65.79%</td>
                 <td>5-2-1</td>
                 <td>62.50%</td>
                 <td>‘16,’23</td>
-                <td>‘14,’18,’20</td>
                 <td></td>
+                <td>‘14,’18,’20</td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>Daniel</td>
                 <td>9</td>
-                <td>0.677</td>
-                <td>1.76</td>
                 <td>21-13-0</td>
                 <td>61.76%</td>
                 <td>7-0-0</td>
                 <td>100.00%</td>
                 <td>‘20</td>
+                <td><img src="/docs/5.3/assets/img/trophy-icon.png" width="30"></td>
                 <td></td>
-                <td></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>Mike</td>
                 <td>9</td>
-                <td>0.675</td>
-                <td>1.75</td>
                 <td>21-11-2</td>
                 <td>61.76%</td>
                 <td>5-1-1</td>
                 <td>71.43%</td>
                 <td>‘15,’19</td>
+                <td><img src="/docs/5.3/assets/img/trophy-icon.png" width="30"></td>
                 <td>‘22</td>
-                <td></td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>Trey</td>
                 <td>9</td>
-                <td>0.667</td>
-                <td>1.73</td>
                 <td>21-12-2</td>
                 <td>60.00%</td>
                 <td>5-1-1</td>
                 <td>71.43%</td>
                 <td>‘16</td>
+                <td><img src="/docs/5.3/assets/img/trophy-icon.png" width="30"></td>
                 <td>‘15,’19</td>
-                <td></td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>Alex</td>
                 <td>9</td>
-                <td>0.663</td>
-                <td>1.75</td>
                 <td>22-12-1</td>
                 <td>62.86%</td>
                 <td>6-1-0</td>
                 <td>85.71%</td>
                 <td>‘19</td>
+                <td><img src="/docs/5.3/assets/img/trophy-icon.png" width="30"></td>
                 <td>‘17</td>
-                <td></td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>Will</td>
                 <td>10</td>
-                <td>0.541</td>
-                <td>1.45</td>
                 <td>21-16-1</td>
                 <td>55.26%</td>
                 <td>4-4-0</td>
                 <td>50.00%</td>
                 <td>‘15,’22</td>
+                <td><img src="/docs/5.3/assets/img/trophy-icon.png" width="30"></td>
                 <td>‘21</td>
-                <td></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>Phil</td>
                 <td>6</td>
-                <td>0.520</td>
-                <td>1.23</td>
                 <td>12-10-1</td>
                 <td>52.17%</td>
                 <td>1-3-0</td>
@@ -306,12 +297,11 @@ Adj Pts for career chart takes into consideration that the earlier years had few
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>Jonny</td>
                 <td>9</td>
-                <td>0.498</td>
-                <td>1.28</td>
                 <td>16-16-3</td>
                 <td>45.71%</td>
                 <td>3-4-0</td>
@@ -319,25 +309,23 @@ Adj Pts for career chart takes into consideration that the earlier years had few
                 <td>‘17</td>
                 <td></td>
                 <td></td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>ET</td>
                 <td>8</td>
-                <td>0.481</td>
-                <td>1.24</td>
                 <td>14-14-3</td>
                 <td>45.16%</td>
                 <td>2-3-1</td>
                 <td>33.33%</td>
                 <td>‘17</td>
+                <td><img src="/docs/5.3/assets/img/trophy-icon.png" width="30"></td>
                 <td>‘16</td>
-                <td></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>Hunter</td>
                 <td>5</td>
-                <td>0.460</td>
-                <td>1.35</td>
                 <td>8-11-3</td>
                 <td>36.36%</td>
                 <td>2-1-1</td>
@@ -345,12 +333,11 @@ Adj Pts for career chart takes into consideration that the earlier years had few
                 <td>‘20</td>
                 <td></td>
                 <td></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>Dave</td>
                 <td>7</td>
-                <td>0.419</td>
-                <td>1.04</td>
                 <td>10-15-2</td>
                 <td>37.04%</td>
                 <td>2-2-1</td>
@@ -358,38 +345,35 @@ Adj Pts for career chart takes into consideration that the earlier years had few
                 <td>‘22</td>
                 <td></td>
                 <td></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>Ben</td>
                 <td>7</td>
-                <td>0.392</td>
-                <td>1.01</td>
                 <td>10-14-3</td>
                 <td>37.04%</td>
                 <td>1-4-1</td>
                 <td>16.67%</td>
                 <td>‘21</td>
+                <td><img src="/docs/5.3/assets/img/trophy-icon.png" width="30"></td>
                 <td></td>
-                <td></td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>Colin</td>
                 <td>10</td>
-                <td>0.391</td>
-                <td>1.03</td>
                 <td>16-21-1</td>
                 <td>42.11%</td>
                 <td>1-6-1</td>
                 <td>12.50%</td>
                 <td>‘14,’18</td>
+                <td><img src="/docs/5.3/assets/img/trophy-icon.png" width="30" class="float-start"><img src="/docs/5.3/assets/img/trophy-icon.png" width="30" class="float-start"></td>
                 <td></td>
-                <td></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>Austin</td>
                 <td>8</td>
-                <td>0.383</td>
-                <td>0.99</td>
                 <td>10-16-5</td>
                 <td>32.26%</td>
                 <td>1-3-2*</td>
@@ -397,12 +381,11 @@ Adj Pts for career chart takes into consideration that the earlier years had few
                 <td>‘21</td>
                 <td></td>
                 <td></td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>Richmond</td>
                 <td>8</td>
-                <td>0.343</td>
-                <td>0.90</td>
                 <td>10-19-2</td>
                 <td>32.26%</td>
                 <td>1-3-2</td>
@@ -410,19 +393,19 @@ Adj Pts for career chart takes into consideration that the earlier years had few
                 <td>‘18</td>
                 <td></td>
                 <td></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>Zack</td>
                 <td>7</td>
-                <td>0.319</td>
-                <td>0.76</td>
                 <td>9-17-1</td>
                 <td>33.33%</td>
                 <td>0-5-0</td>
                 <td>0.00%</td>
-                <td>‘23</td> 
+                <td>‘23</td>
                 <td></td>
                 <td></td>
+                <td>2</td>
             </tr>
       </tbody>
     </table><!-- end table for career rankings-->
@@ -431,11 +414,140 @@ Adj Pts for career chart takes into consideration that the earlier years had few
 <p><mark>*Adjusted for 8 losses in 2020…Singles record is 1-11-2</mark><br>
 <mark>**Adjusted for 8 losses in 2020…Singles Win % is 7.14%</mark></p>
 
+<h5 class="mt-3">Top ranked players in Shooter History</h5>
+<div class="table-responsive mt-3">
+    <table class="table table-striped table-sm table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Name</th>
+                <th scope="col">SMI Player Rating</th>
+                <th scope="col">Points %</th>
+                <th scope="col">Adj. Pts per year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Thomas</td>
+                <td>98.2</td>
+                <td>0.696</td>
+                <td>1.82</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Daniel Connerley</td>
+                <td>91.3</td>
+                <td>0.677</td>
+                <td>1.76</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Mike Jacques</td>
+                <td>91.2</td>
+                <td>0.675</td>
+                <td>1.75</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Trey Hannah</td>
+                <td>85.9</td>
+                <td>0.667</td>
+                <td>1.73</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Alex Debardeleben</td>
+                <td>82.6</td>
+                <td>0.663</td>
+                <td>1.75</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Will Hunt</td>
+                <td>79.1</td>
+                <td>0.541</td>
+                <td>1.45</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Jonny Stovall</td>
+                <td>76.6</td>
+                <td>0.498</td>
+                <td>1.28</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Phil Everett</td>
+                <td>76.5</td>
+                <td>0.520</td>
+                <td>1.23</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Colin Stovall</td>
+                <td>63.5</td>
+                <td>0.391</td>
+                <td>1.03</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Erik Tolleson</td>
+                <td>59.1</td>
+                <td>0.481</td>
+                <td>1.23</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Hunter Hawley</td>
+                <td>54.4</td>
+                <td>0.460</td>
+                <td>1.35</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Ben Boden</td>
+                <td>53.7</td>
+                <td>0.392</td>
+                <td>1.01</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>David Bailey</td>
+                <td>51.7</td>
+                <td>0.419</td>
+                <td>1.03</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Austin Holmes</td>
+                <td>51.4</td>
+                <td>0.383</td>
+                <td>0.99</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Richmond Alexander</td>
+                <td>44.5</td>
+                <td>0.343</td>
+                <td>0.90</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Zack Hutchens</td>
+                <td>43.2</td>
+                <td>0.319</td>
+                <td>0.76</td>
+            </tr>
+        </tbody>
+    </table><!-- end table for career rankings-->
+</div><!--- end table responsive wrap -->
+
 <hr>
 <h4>Overall History</h4>
 <p>Team TN leads the State head to head 3-2 with a combined overall score of <strong>55-50.</strong></p>
 <div class="row border border-secondary-subtle p-3 m-1 mb-3 rounded-2">
-    <div class="col">
+    <div class="col-lg-6 col-md-6 col-sm-12">
         <h5>Longest Win streaks:</h5>
         <ol>
             <li>11 - Thomas from 2019-2022</li>
@@ -444,7 +556,7 @@ Adj Pts for career chart takes into consideration that the earlier years had few
             <li>6 - Mike 2021-2022 (halved his ‘22 Sunday match)</li>
         </ol>
     </div><!--end col-->
-    <div class="col">
+    <div class="col-lg-6 col-md-6 col-sm-12">
     <h5>Undefeated SMI’s</h5>
         <ol>
             <li>2014 - Thomas</li>

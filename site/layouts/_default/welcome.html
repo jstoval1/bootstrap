@@ -3,8 +3,8 @@
   <main class="" id="content">
     <div class="container-xxl p-3">
       <div class="row">
-        <div class="col-lg-9 col-xl-9 col-sm-12">
-          <div class="thread border bg-light p-0 m-0 rounded-2">
+        <div class="col-lg-9 col-xl-9 col-md-9 col-sm-12 mb-3">
+          <div class="thread border p-0 m-0 rounded-2">
             <div class="thread__header bg-secondary-subtle p-2">
               {{ $targetIndex := 6 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
               {{ range $index, $user := .Site.Data.users }}
@@ -215,7 +215,7 @@
                 
                 <!--- START of nested REPLY #1 looks like... --->
                   <div class="thread__body__reply__inner">
-                      <p>Looks like The Shooter is leaving the state of MS!</p>
+                      <p>Looks like The Shooter is leaving the state of MS and headed to TN!</p>
                             <!---- NESTED REPLY TO LOOKS LIKE SHOOTER iS LEAVING-->
                             <div class="thread__body__reply__nested">
                               <div class="row align-items-center justify-content-md-center">
@@ -363,6 +363,8 @@
                                               </div><!-- end row-->
                                               <div class="thread__body__reply__inner">
                                                 <p>Damn right!</p>
+                                                <div class="alert alert-danger" role="alert">
+                                               <em>This post has been reported by ClintCowan849 for inappropriate content.</em></div>
                                                 <div class="thread__body__likes">
                                                   <div class="likes-container"><span class="likes"></span> <span>7</span></div><!-- end container-->
                                                 </div><!-- end likes container-->
@@ -787,7 +789,7 @@
 
 
         <!-- start the sidebar-->
-        <div class="col-lg-3 col-xl-3 col-sm-12">
+        <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12">
             {{ partial "sidebar.html" . }}
         </div><!-- end sidebar-->
 

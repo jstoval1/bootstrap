@@ -1,0 +1,553 @@
+
+  {{ define "main" }}
+  <main class="" id="content">
+    <div class="container-xxl p-3">
+      <div class="row">
+        <div class="col-lg-9 col-xl-9 col-md-9 col-sm-12 mb-3">
+          <div class="thread border p-0 m-0 rounded-2">
+            <div class="thread__header bg-secondary-subtle p-2">
+              {{ $targetIndex := 18 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+              {{ range $index, $user := .Site.Data.users }}
+              {{ if eq $index $targetIndex }}
+              <div class="row align-items-center justify-content-md-center">
+                <div class="col-auto">
+                  <div class="headshot mb-0"style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                </div><!-- end col-->
+                <div class="col">
+                    <!---- start the display of the profile and actual name -->
+                    <div class="row justify-content-start align-items-center">
+                      <div class="col-auto border-secondary-subtle border-end">
+                        <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
+                        </div>
+                      </div><!-- end column-->
+                  
+                      <div class="col-auto">
+                        <strong>July 13, 2017</strong>
+                      </div><!-- end column-->
+                    </div><!-- end row-->
+                    {{ end }}
+                    {{ end }}
+                    <!--end the display of the profile and actual name-->
+                </div><!-- end col-->
+              </div><!-- end row-->
+            </div><!-- end thread__header-->
+
+            <div class="thread__body p-3">
+              <!-- start of the main post-->
+              {{ .Content }}
+              <!-- end of the main post -->
+
+              <h4 class="text-center mt-3 mb-3">Replies</h4>
+              <!---------------------------------Start Thread Reply ----------------------------------->
+                <!------- this is the start of a reply block #1 -------->
+                <div class="thread__body__reply">
+                  {{ $targetIndex := 4 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                  {{ range $index, $user := .Site.Data.users }}
+                  {{ if eq $index $targetIndex }}
+                  <div class="row align-items-center justify-content-md-center">
+                    <div class="col-auto">
+                      <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                    </div><!-- end col-->
+                    <div class="col p-0">
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">Randomdude601</div>
+                        </div><!-- end column-->
+                
+                        <div class="col-auto">
+                          <span class="fw-light"><em>6 years ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
+                      {{ end }}
+                      {{ end }}
+                      <!--end the display of the profile and actual name-->
+                    </div><!-- end col-->
+                  </div><!-- end row-->
+                  <div class="thread__body__reply__inner">
+                    <p>Rick, big fan here of your intro videos…If you were to have someone introduce you on the first tee box, who would it be?</p>
+                    <div class="thread__body__likes">
+                      <div class="likes-container"><span class="likes"></span> <span>500</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+
+                    <!---- NESTED REPLY BLOCK -->
+                    <div class="thread__body__reply__nested">
+                      {{ $targetIndex := 18 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                      {{ range $index, $user := .Site.Data.users }}
+                      {{ if eq $index $targetIndex }}
+                      <div class="row align-items-center justify-content-md-center">
+                        <div class="col-auto">
+                          <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                        </div><!-- end col-->
+                        <div class="col p-0">
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}</div>
+                              </div>
+                            </div><!-- end column-->
+                      
+                            <div class="col-auto">
+                              <span class="fw-light"><em>6 years ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
+                          {{ end }}
+                          {{ end }}
+                          <!--end the display of the profile and actual name-->
+                        </div><!-- end col-->
+                      </div><!-- end row-->
+                      <div class="thread__body__reply__inner">
+                        <p>Great question, one I have thought about a lot, and one that I go back an forth on quite often…But I think the person who would best fit to introduce myself on the first tee box would be Me. I thought about a younger version of myself as the other option, but he hadn’t developed the sense of humor I have now…Now Young Rick was a better golfer than present
+                        day Rick, but intros are more about the punch lines not the punch shot! Speaking of Young Rick, have I ever told you the story about my first club championship victory?</p>
+                        <div class="thread__body__likes">
+                          <div class="likes-container"><span class="likes"></span> <span>1k</span></div><!-- end container-->
+                        </div><!-- end likes container-->
+                      </div><!-- end reply inner-->
+                    </div><!-- end reply-->
+                    <!---- END NESTED REPLY BLOCK ---->                   
+                  </div><!-- end reply inner-->
+                </div>
+                <!-------- this is the end of a reply block #1 --------->
+
+                <!------- this is the start of a reply block #2 -------->
+                <div class="thread__body__reply">
+                  {{ $targetIndex := 4 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                  {{ range $index, $user := .Site.Data.users }}
+                  {{ if eq $index $targetIndex }}
+                  <div class="row align-items-center justify-content-md-center">
+                    <div class="col-auto">
+                      <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                    </div><!-- end col-->
+                    <div class="col p-0">
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">Shooterlover414</div>
+                        </div><!-- end column-->
+                
+                        <div class="col-auto">
+                          <span class="fw-light"><em>6 years ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
+                      {{ end }}
+                      {{ end }}
+                      <!--end the display of the profile and actual name-->
+                    </div><!-- end col-->
+                  </div><!-- end row-->
+                  <div class="thread__body__reply__inner">
+                    <p>Rick, boxers or briefs?</p>
+                    <div class="thread__body__likes">
+                      <div class="likes-container"><span class="likes"></span> <span>3k</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+                
+                    <!---- NESTED REPLY BLOCK -->
+                    <div class="thread__body__reply__nested">
+                      {{ $targetIndex := 18 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                      {{ range $index, $user := .Site.Data.users }}
+                      {{ if eq $index $targetIndex }}
+                      <div class="row align-items-center justify-content-md-center">
+                        <div class="col-auto">
+                          <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                        </div><!-- end col-->
+                        <div class="col p-0">
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}
+                                </div>
+                              </div>
+                            </div><!-- end column-->
+                
+                            <div class="col-auto">
+                              <span class="fw-light"><em>6 years ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
+                          {{ end }}
+                          {{ end }}
+                          <!--end the display of the profile and actual name-->
+                        </div><!-- end col-->
+                      </div><!-- end row-->
+                      <div class="thread__body__reply__inner">
+                        <p>I’ll be brief. Boxers.</p>
+                        <div class="thread__body__likes">
+                          <div class="likes-container"><span class="likes"></span> <span>15k</span></div><!-- end container-->
+                        </div><!-- end likes container-->
+                      </div><!-- end reply inner-->
+                    </div><!-- end reply-->
+                    <!---- END NESTED REPLY BLOCK ---->
+                  </div><!-- end reply inner-->
+                </div>
+                <!-------- this is the end of a reply block #2 --------->
+
+                <!------- this is the start of a reply block #3 -------->
+                <div class="thread__body__reply">
+                  {{ $targetIndex := 4 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                  {{ range $index, $user := .Site.Data.users }}
+                  {{ if eq $index $targetIndex }}
+                  <div class="row align-items-center justify-content-md-center">
+                    <div class="col-auto">
+                      <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                    </div><!-- end col-->
+                    <div class="col p-0">
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">SlickRickMVP</div>
+                        </div><!-- end column-->
+                
+                        <div class="col-auto">
+                          <span class="fw-light"><em>5 years ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
+                      {{ end }}
+                      {{ end }}
+                      <!--end the display of the profile and actual name-->
+                    </div><!-- end col-->
+                  </div><!-- end row-->
+                  <div class="thread__body__reply__inner">
+                    <p>Tiger or Phil?</p>
+                    <div class="thread__body__likes">
+                      <div class="likes-container"><span class="likes"></span> <span>800</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+                
+                    <!---- NESTED REPLY BLOCK -->
+                    <div class="thread__body__reply__nested">
+                      {{ $targetIndex := 18 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                      {{ range $index, $user := .Site.Data.users }}
+                      {{ if eq $index $targetIndex }}
+                      <div class="row align-items-center justify-content-md-center">
+                        <div class="col-auto">
+                          <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                        </div><!-- end col-->
+                        <div class="col p-0">
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}
+                                </div>
+                              </div>
+                            </div><!-- end column-->
+                
+                            <div class="col-auto">
+                              <span class="fw-light"><em>5 years ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
+                          {{ end }}
+                          {{ end }}
+                          <!--end the display of the profile and actual name-->
+                        </div><!-- end col-->
+                      </div><!-- end row-->
+                      <div class="thread__body__reply__inner">
+                        <p>Another great question, Tiger vs. Phil, an age old argument over beers at the bar! Tiger has more majors, Phil had more fans…Fist pumps or thumbs up? Tiger was more clutch, but Phil had the charisma…If only there was a golfer with both, that would put this argument to bed! And what do you know, I do know someone with both. I choose Rick Debardeleben. Too many club championships to keep track of AT multiple country clubs…Continuous requests to do standup for others…Clear cut winner IMO…</p>
+                        <div class="thread__body__likes">
+                          <div class="likes-container"><span class="likes"></span> <span>2k</span></div><!-- end container-->
+                        </div><!-- end likes container-->
+                      </div><!-- end reply inner-->
+                    </div><!-- end reply-->
+                    <!---- END NESTED REPLY BLOCK ---->
+                  </div><!-- end reply inner-->
+                </div>
+                <!-------- this is the end of a reply block #3 --------->
+
+                <!------- this is the start of a reply block #4 -------->
+                <div class="thread__body__reply">
+                  {{ $targetIndex := 4 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                  {{ range $index, $user := .Site.Data.users }}
+                  {{ if eq $index $targetIndex }}
+                  <div class="row align-items-center justify-content-md-center">
+                    <div class="col-auto">
+                      <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                    </div><!-- end col-->
+                    <div class="col p-0">
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">randomuser901</div>
+                        </div><!-- end column-->
+                
+                        <div class="col-auto">
+                          <span class="fw-light"><em>4 years ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
+                      {{ end }}
+                      {{ end }}
+                      <!--end the display of the profile and actual name-->
+                    </div><!-- end col-->
+                  </div><!-- end row-->
+                  <div class="thread__body__reply__inner">
+                    <p>Popeyes chicken sandwich or Chick Fil A?</p>
+                    <div class="thread__body__likes">
+                      <div class="likes-container"><span class="likes"></span> <span>1.5k</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+                
+                    <!---- NESTED REPLY BLOCK -->
+                    <div class="thread__body__reply__nested">
+                      {{ $targetIndex := 18 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                      {{ range $index, $user := .Site.Data.users }}
+                      {{ if eq $index $targetIndex }}
+                      <div class="row align-items-center justify-content-md-center">
+                        <div class="col-auto">
+                          <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                        </div><!-- end col-->
+                        <div class="col p-0">
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}
+                                </div>
+                              </div>
+                            </div><!-- end column-->
+                
+                            <div class="col-auto">
+                              <span class="fw-light"><em>4 years ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
+                          {{ end }}
+                          {{ end }}
+                          <!--end the display of the profile and actual name-->
+                        </div><!-- end col-->
+                      </div><!-- end row-->
+                      <div class="thread__body__reply__inner">
+                        <p>Wooboy, these questions are getting tougher! But you came to the right place for this answer, do I look like a guy who hasn’t tried these sandwiches many times over?? Chick Fil A  has set the standard in the fast food industry. Kind of like myself in the eyes of my sons. But Popeyes is different, carries a little more heat, a little more crunch, and a bigger breast than the other sandwich option. My Popeyes’s review sounds more like one of those Gen Z kid’s Tinder profiles! Final answer Chick Fil A. Speaking of chicken, have you heard about my son’s club championship matches? </p>
+                        <div class="thread__body__likes">
+                          <div class="likes-container"><span class="likes"></span> <span>3k</span></div><!-- end container-->
+                        </div><!-- end likes container-->
+                      </div><!-- end reply inner-->
+                    </div><!-- end reply-->
+                    <!---- END NESTED REPLY BLOCK ---->
+                  </div><!-- end reply inner-->
+                </div>
+                <!-------- this is the end of a reply block #4 --------->
+
+                <!------- this is the start of a reply block #5 -------->
+                <div class="thread__body__reply">
+                  {{ $targetIndex := 4 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                  {{ range $index, $user := .Site.Data.users }}
+                  {{ if eq $index $targetIndex }}
+                  <div class="row align-items-center justify-content-md-center">
+                    <div class="col-auto">
+                      <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                    </div><!-- end col-->
+                    <div class="col p-0">
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">randomrickfan1</div>
+                        </div><!-- end column-->
+                
+                        <div class="col-auto">
+                          <span class="fw-light"><em>3 years ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
+                      {{ end }}
+                      {{ end }}
+                      <!--end the display of the profile and actual name-->
+                    </div><!-- end col-->
+                  </div><!-- end row-->
+                  <div class="thread__body__reply__inner">
+                    <p>Speaking of sons, which one is your favorite??</p>
+                    <div class="thread__body__likes">
+                      <div class="likes-container"><span class="likes"></span> <span>1.5k</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+                
+                    <!---- NESTED REPLY BLOCK -->
+                    <div class="thread__body__reply__nested">
+                      {{ $targetIndex := 18 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                      {{ range $index, $user := .Site.Data.users }}
+                      {{ if eq $index $targetIndex }}
+                      <div class="row align-items-center justify-content-md-center">
+                        <div class="col-auto">
+                          <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                        </div><!-- end col-->
+                        <div class="col p-0">
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}
+                                </div>
+                              </div>
+                            </div><!-- end column-->
+                
+                            <div class="col-auto">
+                              <span class="fw-light"><em>3 years ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
+                          {{ end }}
+                          {{ end }}
+                          <!--end the display of the profile and actual name-->
+                        </div><!-- end col-->
+                      </div><!-- end row-->
+                      <div class="thread__body__reply__inner">
+                        <p>Next question please. I wouldn’t want to hurt all of their feelings.</p>
+                        <div class="thread__body__likes">
+                          <div class="likes-container"><span class="likes"></span> <span>3k</span></div><!-- end container-->
+                        </div><!-- end likes container-->
+                      </div><!-- end reply inner-->
+                    </div><!-- end reply-->
+                    <!---- END NESTED REPLY BLOCK ---->
+                  </div><!-- end reply inner-->
+                </div>
+                <!-------- this is the end of a reply block #5 --------->
+
+                <!------- this is the start of a reply block #6 -------->
+                <div class="thread__body__reply">
+                  {{ $targetIndex := 4 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                  {{ range $index, $user := .Site.Data.users }}
+                  {{ if eq $index $targetIndex }}
+                  <div class="row align-items-center justify-content-md-center">
+                    <div class="col-auto">
+                      <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                    </div><!-- end col-->
+                    <div class="col p-0">
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">Randomfan111</div>
+                        </div><!-- end column-->
+                
+                        <div class="col-auto">
+                          <span class="fw-light"><em>2 years ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
+                      {{ end }}
+                      {{ end }}
+                      <!--end the display of the profile and actual name-->
+                    </div><!-- end col-->
+                  </div><!-- end row-->
+                  <div class="thread__body__reply__inner">
+                    <p>What are your thoughts on AI?</p>
+                    <div class="thread__body__likes">
+                      <div class="likes-container"><span class="likes"></span> <span>1.5k</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+                
+                    <!---- NESTED REPLY BLOCK -->
+                    <div class="thread__body__reply__nested">
+                      {{ $targetIndex := 18 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                      {{ range $index, $user := .Site.Data.users }}
+                      {{ if eq $index $targetIndex }}
+                      <div class="row align-items-center justify-content-md-center">
+                        <div class="col-auto">
+                          <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                        </div><!-- end col-->
+                        <div class="col p-0">
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}
+                                </div>
+                              </div>
+                            </div><!-- end column-->
+                
+                            <div class="col-auto">
+                              <span class="fw-light"><em>2 years ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
+                          {{ end }}
+                          {{ end }}
+                          <!--end the display of the profile and actual name-->
+                        </div><!-- end col-->
+                      </div><!-- end row-->
+                      <div class="thread__body__reply__inner">
+                        <p>The only “AI” that I can speak on is when my broke college boys would call me and start the convo with “A I need to
+                        borrow some more money to go to the Library”!! But I’ve seen all the Matrixs’, I know how this movie ends. Only robots I
+                        need in my life are the one who can help me operate this damn DirecTV remote! I can’t ever remember how to record my Ole
+                        Miss Rebels! Oh boy, looks like they are heading to my car with my Bloom Onion, I got time for one more question, make
+                        it a good one!</p>
+                        <div class="thread__body__likes">
+                          <div class="likes-container"><span class="likes"></span> <span>3k</span></div><!-- end container-->
+                        </div><!-- end likes container-->
+                      </div><!-- end reply inner-->
+                    </div><!-- end reply-->
+                    <!---- END NESTED REPLY BLOCK ---->
+                  </div><!-- end reply inner-->
+                </div>
+                <!-------- this is the end of a reply block #6 --------->
+
+                <!------- this is the start of a reply block #7 -------->
+                <div class="thread__body__reply">
+                  {{ $targetIndex := 4 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                  {{ range $index, $user := .Site.Data.users }}
+                  {{ if eq $index $targetIndex }}
+                  <div class="row align-items-center justify-content-md-center">
+                    <div class="col-auto">
+                      <div class="headshot mb-0" style="background-image: url('/docs/5.3/assets/img/headshots/random.jpg');"></div>
+                    </div><!-- end col-->
+                    <div class="col p-0">
+                      <!---- start the display of the profile and actual name -->
+                      <div class="row justify-content-start align-items-center">
+                        <div class="col-auto border-secondary-subtle border-end">
+                          <div class="profilename">Randomfan601</div>
+                        </div><!-- end column-->
+                
+                        <div class="col-auto">
+                          <span class="fw-light"><em>10 months ago</em></span>
+                        </div><!-- end column-->
+                      </div><!-- end row-->
+                      {{ end }}
+                      {{ end }}
+                      <!--end the display of the profile and actual name-->
+                    </div><!-- end col-->
+                  </div><!-- end row-->
+                  <div class="thread__body__reply__inner">
+                    <p>Who do you think will win the 2023 Shooter McGavin Invitational??</p>
+                    <div class="thread__body__likes">
+                      <div class="likes-container"><span class="likes"></span> <span>1k</span></div><!-- end container-->
+                    </div><!-- end likes container-->
+                
+                    <!---- NESTED REPLY BLOCK -->
+                    <div class="thread__body__reply__nested">
+                      {{ $targetIndex := 18 }} <!-- Index is zero-based, so 1 corresponds to the second team member -->
+                      {{ range $index, $user := .Site.Data.users }}
+                      {{ if eq $index $targetIndex }}
+                      <div class="row align-items-center justify-content-md-center">
+                        <div class="col-auto">
+                          <div class="headshot mb-0" style="background-image: url('{{ $user.profile.headshot | relURL }}');"></div>
+                        </div><!-- end col-->
+                        <div class="col p-0">
+                          <!---- start the display of the profile and actual name -->
+                          <div class="row justify-content-start align-items-center">
+                            <div class="col-auto border-secondary-subtle border-end">
+                              <div class="profilename">{{ $user.profile.name }} <div class="actualname">{{$user.profile.actualname }}
+                                </div>
+                              </div>
+                            </div><!-- end column-->
+                
+                            <div class="col-auto">
+                              <span class="fw-light"><em>10 months ago</em></span>
+                            </div><!-- end column-->
+                          </div><!-- end row-->
+                          {{ end }}
+                          {{ end }}
+                          <!--end the display of the profile and actual name-->
+                        </div><!-- end col-->
+                      </div><!-- end row-->
+                      <div class="thread__body__reply__inner">
+                        <p>What a great way to finish the AMA! Speaking of finishing, have I ever told you my Trey Hannah/ Dan Mullen story? You know what, let’s save that for another time. This is a tough one, my son Alex plays on team Sip, but my other favorite son Will Hunt, is on team TN, so I’m really torn about how I answer this question. Team Sip started off hot at Kirkwood and looked to really dominate, I would like to think at least 2-3 points that Team Sip earned were attributed to my wonderful tee box introductions. But I didn’t see my stats listed in that “stats” post. Not bitter at all. So anyway, I was invited back to announce at Old Waverly but was warned/encouraged not to be so crude this time, especially since we had a new golfer coming on The Shooter trip that year. So I did as I was told and wasn’t too hard on Phil with his introduction, everyone seemed to love my little impotent joke! But I digress, my introductions might have backfired on me that year because team TN pulled out a victory. Guess Phil took it a little too personal and surprised these young folks with his stamina! So, how do I choose a winner? My invitation to this year’s SMI must have gotten lost in the mail. With that being said, the lack of respect I have gotten to not even get a sniff of a chance to be at the 10th-anniversary trip, I’m taking neither team this time!! A SHOOTER MCGAVIN FIRST….SLICK RICK PROCLAIMS A TIE!!!!  </p>
+                        <img src="https://media.giphy.com/media/U23rlgyL8QmQn7xrqt/giphy-downsized-large.gif" class="img-fluid">
+                        <div class="thread__body__likes">
+                          <div class="likes-container"><span class="likes"></span> <span>5k</span></div><!-- end container-->
+                        </div><!-- end likes container-->
+                      </div><!-- end reply inner-->
+                    </div><!-- end reply-->
+                    <!---- END NESTED REPLY BLOCK ---->
+                  </div><!-- end reply inner-->
+                </div>
+                <!-------- this is the end of a reply block #7 --------->
+
+              <!---------------------------------End Thread Reply ----------------------------------->
+            </div><!-- end MAIN THREAD body-->
+          </div><!--------- THIS ENDS THE ENTIRE THREAD --------->
+        </div><!-- THIS ends the column for the thread-->
+
+
+
+        <!-- start the sidebar-->
+        <div class="col-lg-3 col-xl-3 col-md-3 col-sm-12">
+            {{ partial "sidebar.html" . }}
+        </div><!-- end sidebar-->
+
+      </div><!--end row-->
+    </div><!-- end container -->
+
+  </main>
+  {{ end }}
